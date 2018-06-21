@@ -1,7 +1,7 @@
-[[s2i-aspnet-example]]
-= .NET Core Sample App for OpenShift
+[[s2i-aspnet-example-copy]]
+= Clone of .NET Core Sample App for OpenShift
 
-This repository contains an example project that can be built using the
+This repository contains a modified example project that can be built using the
 https://github.com/redhat-developer/s2i-dotnetcore[s2i-dotnetcore] builder
 image, which can be used to create reproducible Docker images from your .NET
 Core project's source code. The resulting images can be run using
