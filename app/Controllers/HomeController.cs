@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,7 +15,14 @@ namespace app.Controllers
             return View();
         }
 
-        public IActionResult About()
+    public IActionResult Help()
+    {
+      ViewData["Message"] = "New page.";
+
+      return View();
+    }
+
+    public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
