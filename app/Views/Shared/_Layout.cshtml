@@ -1,426 +1,287 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>
-			@ViewData["Title"]California-Fusion
-		</title>
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-		<!-- State Template Search -->
-		<script src="~/catemp/js/search/js"></script>
-		<!-- State Template Stuffs -->
-		<link rel="stylesheet" href="~/catemp/css/cagov.core.css" />
-		<link href="~/catemp/css/colorscheme-mono.css" rel="stylesheet" />
-		<link rel="stylesheet" href="~/catemp/css/custom.css" />
-		<!--
-		<link rel="stylesheet" href="~/css/site.css" />
-		-->
-		<!-- modernizr.com, feature detection -->
-		<script src="~/catemp/js/libs/modernizr-2.0.6.min.js"></script>
-		<script src="~/catemp/js/libs/modernizr-extra.min.js"></script>
-		<environment include="Development">
-		<!-- 
-		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-		<link rel="stylesheet" href="~/css/site.css" />
-		-->
-		</environment>
-		<environment exclude="Development">
-		<!-- <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-		asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-		asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-		<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-		-->
-		</environment>
-	</head>
-	<body class="primary">
-		<!-- Header Area -->
-		<header role="banner" id="header" class="global-header fixed">
-		<div id="skip-to-content">
-			<a href="#main-content">Skip to Main Content</a>
-		</div>
-		<!-- Location Bar -->
-		<div class="location-settings section section-standout collapse collapsed " id="locationSettings">
-			<div class="container p-y">
-				<button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
-				<span aria-hidden="true">
-					&times;
-				</span>
-				</button>
-				<div class="form-group form-inline">
-					<label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
-					<input type="text" class="form-control" id="locationZipCode" placeholder="Zip Code">
-					<button type="button" class="btn btn-primary">Set Location</button>
-				</div>
-			</div>
-		</div>
-		<!-- Include Utility Header -->
-		<div class="utility-header">
-			<div class="container">
-				<div class="group">
-					<div class="half">
-						<ul class="utility-links social-media-links">
-							<li>
-								<div class="header-cagov-logo">
-									<a href="/"><img src="~/catemp/images/Ca-Gov-Logo-Gold.svg" alt="CA.gov" /></a>
-								</div>
-							</li>
-							<li>
-								<a href="/Home">
-								<span class="ca-gov-icon-home" aria-hidden="true">
-								</span>
-								<span class="sr-only">
-									Home
-								</span>
-								</a>
-							</li>
-							Share
-							<li>
-								<a class="ca-gov-icon-facebook" href=https://www.facebook.com/sharer/sharer.php?u =https%3A%2F%2Fca.gov%2F&t" ="Share CA.Gov via Facebook">
-								<span class="sr-only">
-									Facebook
-								</span>
-								</a>
-							</li>
-							<li>
-								<a class="ca-gov-icon-twitter" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fca.gov%2F&text=Share Ca.Gov via Twitter">
-								<span class="sr-only">
-									Twitter
-								</span>
-								</a>
-							</li>
-							<li>
-								<a class="ca-gov-icon-google-plus" href="https://plus.google.com/share?url=https%3A%2F%2Fca.gov%2F" ="Share via Google+">
-								<span class="sr-only">
-									Google+
-								</span>
-								</a>
-							</li>
-							<li>
-								<a class="ca-gov-icon-email" title="Share via email">
-								<span class="sr-only">
-									Email
-								</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="half settings-links p-t-sm">
-						<ul class="utility-links ">
-							<li>
-								<button class="btn btn-xs btn-primary" data-toggle="collapse" href="/Home/About" aria-expanded="false" aria-controls="siteSettings"> About</button>
-							</li>
-							<li>
-								<button class="btn btn-xs btn-primary" data-toggle="collapse" href="/Home/Contact" aria-expanded="false" aria-controls="siteSettings"> Contact</button>
-							</li>
-							<li>
-								<button class="btn btn-xs btn-primary" data-toggle="collapse" href="/Home/Settings" aria-expanded="false" aria-controls="siteSettings"> Settings</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Settings Bar -->
-		<div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
-			<div class="container  p-y">
-				<button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close">
-				<span aria-hidden="true">
-					&times;
-				</span>
-				</button>
-				<div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
-					<div class="btn-group">
-						<button type="button" class="btn btn-standout disableHighContrastMode">Default</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-standout enableHighContrastMode">High Contrast</button>
-					</div>
-				</div>
-				<div class="btn-group" role="group" aria-label="textSizeMode">
-					<div class="btn-group">
-						<button type="button" class="btn btn-standout resetTextSize">Reset</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-standout increaseTextSize">
-						<span class="hidden-xs">
-							Increase Font Size
-						</span>
-						<span class="visible-xs">
-							Font <small class="ca-gov-icon-plus-line"></small>
-						</span>
-						</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-standout decreaseTextSize">
-						<span class="hidden-xs">
-							Decrease Font Size
-						</span>
-						<span class="visible-xs">
-							Font <small class="ca-gov-icon-minus-line"></small>
-						</span>
-						</button>
-					</div>
-				</div>
-				<!-- <button type="button" class="btn btn-primary clipboard-activeonhover">Save links on hover</button> -->
-			</div>
-		</div>
-		<!-- Include Branding -->
-		<!-- header branding -->
-		<div class="branding">
-			<div class="header-organization-banner">
-				<a href="/"><img src="~/images/Fusion-logo.png" alt="Organization Title" /></a>
-			</div>
-		</div>
-		<!-- Include Mobile Controls -->
-		<!-- mobile navigation controls -->
-		<div class="mobile-controls">
-			<span class="mobile-control-group mobile-header-icons">
-				<!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
-			</span>
-			<div class="mobile-control-group main-nav-icons pull-right">
-				<button class="mobile-control toggle-menu pull-right" aria-expanded="false" aria-controls="navigation">
-				<span class="ca-gov-icon-menu hidden-print" aria-hidden="true">
-				</span>
-				<span class="sr-only">
-					Menu
-				</span>
-				</button>
-				<button class="mobile-control toggle-search">
-				<span class="ca-gov-icon-search hidden-print" aria-hidden="true">
-				</span>
-				<span class="sr-only">
-					Search
-				</span>
-				</button>
-			</div>
-		</div>
-		<nav id="navigation" class="main-navigation megadropdown auto-highlight">
-		<ul id="nav_list" class="top-level-nav">
-			<li class="nav-item">
-				<a href="" class="first-level-link">
-				<span class="ca-gov-icon-gears">
-				</span>
-				Citizens</a>
-				<div class="sub-nav">
-					<div class="third">
-						<ul class="second-level-nav">
-							<li class="unit1">
-								<a href="/Home/Citizens" class="second-level-link">
-								<span class="ca-gov-icon-home" aria-hidden="true">
-								</span>
-								Link 1</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a href="" class="first-level-link">
-				<span class="ca-gov-icon-gears">
-				</span>
-				Agencies</a>
-				<div class="sub-nav">
-					<ul class="second-level-nav">
-						<li class="unit1">
-							<a href="/Home/Citizens" class="second-level-link">
-							<span class="ca-gov-icon-home" aria-hidden="true">
-							</span>
-							Link 1</a>
-						</li>
-					</ul>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a href="" class="first-level-link">
-				<span class="ca-gov-icon-online-services">
-				</span>
-				Login</a>
-			</li>
-			<li class="nav-item" id='nav-item-search'>
-				<a href="javascript:;" class="first-level-link">
-				<span class="ca-gov-icon-search" aria-hidden="true">
-				</span>
-				Search</a>
-			</li>
-		</ul>
-		</nav>
-		<div>
-			<!-- Include Navigation -->
-			<!--
-			Step 2
-			Select Navigation Type:
-			Options are: megadropdown dropdown singlelevel
-			-->
-			@*<nav id="navigation" class="main-navigation megadropdown auto-highlight">
-			<ul id="nav_list" class="top-level-nav">
-				<li class="nav-item" id='nav-item-search'>
-					<a href="javascript:;" class="first-level-link">
-					<span class="ca-gov-icon-search" aria-hidden="true">
-					</span>
-					Search</a>
-				</li>
-			</ul>
-			</nav>*@
-		</div>
-		<!-- 
-		<div id="head-search" class="search-container featured-search fade">
-		<!-- Include Search -->
-		<!-- Google Custom Search - /ssi/search.html
-		<script type="text/javascript">
-		var cx = '001779225245372747843:9s-idxui5pk';// Step 7: Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
-		var gcse = document.createElement('script');
-		gcse.type = 'text/javascript';
-		gcse.async = true;
-		gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-		var s = document.getElementsByTagName('script');
-		s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
-		</script>
-		<gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>
-		</div>
-		</div>
-		-->
-		<div class="header-decoration">
-		</div>
-		</header>
-		<!-- end of header -->
-		<!-- Include for optional slideshow banner -->
-		<!-- 
-		<div class="header-single-banner hidden-print" style="background-image: url('~/catemp/sample/images/FogHorns-1920.jpg');">
-		<div class="explore-invite">
-		<div class="text-center">
-		<a href="">
-		<span class="explore-title">
-		Explore
-		</span>
-		<span class="ca-gov-icon-arrow-down" aria-hidden="true">
-		</span>
-		</a>
-		</div>
-		</div>
-		</div>
-		-->
-		<div >
-			@RenderBody()
-			<hr />
-		</div>
-		<footer id="footer" class="global-footer">
-		<div class="container">
-			<div class="row">
-				<div class="three-quarters">
-					<ul class="footer-links">
-						<li>
-							<a href="#skip-to-content">Back to Top</a>
-						</li>
-						<li>
-							<a href="#">Conditions of Use</a>
-						</li>
-						<li>
-							<a href="#">Privacy Policy</a>
-						</li>
-						<li>
-							<a href="#">Accessibility</a>
-						</li>
-						<li>
-							<a href="#">Contact Us</a>
-						</li>
-					</ul>
-				</div>
-				<div class="quarter text-right">
-					<ul class="socialsharer-container">
-						<li>
-							<a href="https://www.flickr.com/groups/californiagovernment">
-							<span class="ca-gov-icon-flickr" aria-hidden="true">
-							</span>
-							<span class="sr-only">
-								Flickr
-							</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.pinterest.com/cagovernment/">
-							<span class="ca-gov-icon-pinterest" aria-hidden="true">
-							</span>
-							<span class="sr-only">
-								Pinterest
-							</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://twitter.com/cagovernment">
-							<span class="ca-gov-icon-twitter" aria-hidden="true">
-							</span>
-							<span class="sr-only">
-								Twitter
-							</span>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.youtube.com/user/californiagovernment">
-							<span class="ca-gov-icon-youtube" aria-hidden="true">
-							</span>
-							<span class="sr-only">
-								YouTube
-							</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- Copyright Statement -->
-		<div class="copyright">
-			<div class="container">
-				Copyright &copy; 
-				<script>document.write(new Date().getFullYear())</script>
-				State of California
-			</div>
-		</div>
-		</footer>
-		<!-- Extra Decorative Content -->
-		<div class="decoration-last">
-			&nbsp;
-		</div>
-		<!-- Loading JS Modules for state Template -->
-		<script src="~/lib/jquery/dist/jquery.js"></script>
-		<!-- Load jQuery migrate from CDN with fallback to local copy -->
-		<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
-		<script>
-        //Fall back to local copy if no jQuery migrate found
-        if (typeof jQuery.migrateWarnings == 'undefined') { // or typeof jQuery.fn.live == 'undefined'
-            document.write(unescape("%3Cscript src='~catemp/js/libs/jquery-migrate-3.0.1.js' type='text/javascript'%3E%3C/script%3E"));
-        }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"]California-Fusion</title>
 
-		</script>
-		<script src="~/catemp/js/cagov.core.js"></script>
-		<script src="~/js/site.min.js" asp-append-version="true"></script>
-		<environment include="Development">
-		<!--  
-		<script src="~/lib/jquery/dist/jquery.js"></script>
-		<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-		-->
-		<!-- 
-		<script src="~/js/site.js" asp-append-version="true"></script>
-		-->
-		</environment>
-		<environment exclude="Development">
-		<!--  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-		asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-		asp-fallback-test="window.jQuery"
-		crossorigin="anonymous"
-		integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">        </script>
-		-->
-		<!-- <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-		asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-		asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-		crossorigin="anonymous"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">        </script>
-		-->
-		<!--
-		<script src="~/js/site.min.js" asp-append-version="true"></script>
-		-->
-		</environment>
-		@RenderSection("Scripts", required: false)
-	</body>
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- State Template Search -->
+  <script src="~/catemp/js/search/js"></script>
+
+  <!-- State Template Stuffs -->
+  <link rel="stylesheet" href="~/catemp/css/cagov.core.css" />
+  <link href="~/catemp/css/colorscheme-mono.css" rel="stylesheet" />
+  <link rel="stylesheet" href="~/catemp/css/custom.css" />
+  <!--<link rel="stylesheet" href="~/css/site.css" />-->
+  <!-- modernizr.com, feature detection -->
+  <script src="~/catemp/js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="~/catemp/js/libs/modernizr-extra.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <environment include="Development">
+    <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+     <link rel="stylesheet" href="~/css/site.css" />-->
+  </environment>
+  <environment exclude="Development">
+    <!-- <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+           asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+           asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />-->
+  </environment>
+</head>
+<body class="primary">
+
+  <!-- Header Area -->
+  <header role="banner" id="header" class="global-header fixed">
+    <div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+
+    <!-- Location Bar -->
+    <div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+      <div class="container p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <div class="form-group form-inline">
+          <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+          <input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+          <button type="button" class="btn btn-primary">Set Location</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Settings Bar -->
+
+    <div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
+      <div class="container  p-y">
+        <button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
+          <div class="btn-group"><button type="button" class="btn btn-primary disableHighContrastMode">Default</button></div>
+          <div class="btn-group"><button type="button" class="btn btn-primary enableHighContrastMode">High Contrast</button></div>
+        </div>
+        <div class="btn-group" role="group" aria-label="textSizeMode">
+          <div class="btn-group"><button type="button" class="btn btn-primary resetTextSize">Reset</button></div>
+          <div class="btn-group"><button type="button" class="btn btn-primary increaseTextSize"><span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-plus-line"></small></span></button></div>
+          <div class="btn-group"><button type="button" class="btn btn-primary decreaseTextSize"><span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <small class="ca-gov-icon-minus-line"></small></span></button></div>
+        </div>
+
+        <!-- <button type="button" class="btn btn-primary clipboard-activeonhover">Save links on hover</button> -->
+
+      </div>
+    </div>
+    <!-- Alert Banner -->
+    <!-- Include Utility Header -->
+    <div class="utility-header">
+      <div class="container">
+        <div class="group">
+          <div class="half">
+
+            <ul class="utility-links social-media-links">
+              <li><div class="header-cagov-logo"><a href="/"><img src="~/catemp/images/Ca-Gov-Logo-Gold.svg" alt="CA.gov" /></a></div></li>
+              <li><a href="/Home"><span class="ca-gov-icon-home" aria-hidden="true"></span><span class="sr-only">Home</span></a></li>
+
+              Share
+              <li><a class="ca-gov-icon-facebook" href=https://www.facebook.com/sharer/sharer.php?u =https%3A%2F%2Fca.gov%2F&t" ="Share CA.Gov via Facebook"><span class="sr-only">Facebook</span></a></li>
+              <li><a class="ca-gov-icon-twitter" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fca.gov%2F&text=Share Ca.Gov via Twitter"><span class="sr-only">Twitter</span></a></li>
+              <li><a class="ca-gov-icon-google-plus" href="https://plus.google.com/share?url=https%3A%2F%2Fca.gov%2F" ="Share via Google+"><span class="sr-only">Google+</span></a></li>
+            </ul>
+          </div>
+          <div class="half settings-links p-t-sm">
+
+            <ul class="utility-links ">
+              <li><a href="/Home/About"> About</a></li>
+              <li><a href="/Home/Contact"> Contact</a></li>
+              <li><a role="button" data-toggle="collapse" href="#siteSettings" aria-expanded="false" aria-controls="siteSettings">Settings</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Branding -->
+    <!-- header branding -->
+
+    <div class="branding">
+      <div class="header-organization-banner"><a href="/"><img src="~/images/Fusion-logo.png" alt="Organization Title" /></a></div>
+    </div>
+
+    <!-- Include Mobile Controls -->
+    <!-- mobile navigation controls -->
+    <div class="mobile-controls">
+      <span class="mobile-control-group mobile-header-icons">
+        <!-- Add more mobile controls here. These will be on the right side of the mobile page header section -->
+      </span>
+      <div class="mobile-control-group main-nav-icons pull-right">
+        <button class="mobile-control toggle-menu pull-right" aria-expanded="false" aria-controls="navigation"><span class="ca-gov-icon-menu hidden-print" aria-hidden="true"></span><span class="sr-only">Menu</span></button>
+        <button class="mobile-control toggle-search">
+          <span class="ca-gov-icon-search hidden-print" aria-hidden="true"></span><span class="sr-only">Search</span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="navigation" class="main-navigation megadropdown auto-highlight">
+      <ul id="nav_list" class="top-level-nav">
+        <li class="nav-item">
+          <a href="" class="first-level-link"><span class="ca-gov-icon-gears"></span>Citizens</a>
+          <div class="sub-nav">
+            <div class="third">
+              <ul class="second-level-nav">
+                <li class="unit1">
+                  <a href="/Home/Citizens" class="second-level-link"><span class="ca-gov-icon-home" aria-hidden="true"></span>Link 1</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="" class="first-level-link"><span class="ca-gov-icon-gears"></span>Agencies</a>
+          <div class="sub-nav">
+            <ul class="second-level-nav">
+              <li class="unit1">
+                <a href="/Home/Citizens" class="second-level-link"><span class="ca-gov-icon-home" aria-hidden="true"></span>Link 1</a>
+              </li>
+            </ul>
+
+          </div>
+        </li>
+
+
+        <li class="nav-item">
+          <a href="" class="first-level-link"><span class="ca-gov-icon-online-services"></span>Login</a>
+        </li>
+        <li class="nav-item" id='nav-item-search'>
+          <a href="javascript:;" class="first-level-link"><span class="ca-gov-icon-search" aria-hidden="true"></span>Search</a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- <div id="head-search" class="search-container featured-search fade">
+    <!-- Include Search -->
+    <!-- Google Custom Search - /ssi/search.html
+
+            <script type="text/javascript">
+                var cx = '001779225245372747843:9s-idxui5pk';// Step 7: Update this value with your search engine unique ID. Submit a request to the CDT Service Desk if you don't already know your unique search engine ID.
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script');
+                s[s.length - 1].parentNode.insertBefore(gcse, s[s.length - 1]);
+            </script>
+
+            <gcse:searchbox-only resultsUrl="/serp.html" enableAutoComplete="true"></gcse:searchbox-only>
+
+        </div>
+
+    </div> -->
+
+    <div class="header-decoration"></div>
+
+  </header>
+
+  <!-- end of header -->
+  <!-- Include for optional slideshow banner -->
+  <!-- <div class="header-single-banner hidden-print" style="background-image: url('~/catemp/sample/images/FogHorns-1920.jpg');">
+     <div class="explore-invite">
+         <div class="text-center">
+             <a href=""><span class="explore-title">Explore</span><span class="ca-gov-icon-arrow-down" aria-hidden="true"></span></a>
+         </div>
+     </div>
+   </div>-->
+
+
+  <div>
+    @RenderBody()
+    <hr />
+
+  </div>
+
+
+
+  <footer id="footer" class="global-footer">
+    <div class="container">
+      <div class="row">
+        <div class="three-quarters">
+          <ul class="footer-links">
+            <li><a href="#skip-to-content">Back to Top</a></li>
+            <li><a href="#">Conditions of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="quarter text-right">
+          <ul class="socialsharer-container">
+            <li><a href="https://www.flickr.com/groups/californiagovernment"><span class="ca-gov-icon-flickr" aria-hidden="true"></span><span class="sr-only">Flickr</span></a></li>
+            <li><a href="https://www.pinterest.com/cagovernment/"><span class="ca-gov-icon-pinterest" aria-hidden="true"></span><span class="sr-only">Pinterest</span></a></li>
+            <li><a href="https://twitter.com/cagovernment"><span class="ca-gov-icon-twitter" aria-hidden="true"></span><span class="sr-only">Twitter</span></a></li>
+            <li><a href="https://www.youtube.com/user/californiagovernment"><span class="ca-gov-icon-youtube" aria-hidden="true"></span><span class="sr-only">YouTube</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright Statement -->
+    <div class="copyright">
+      <div class="container">
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script> State of California
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Extra Decorative Content -->
+  <div class="decoration-last">&nbsp;</div>
+
+  <!-- Loading JS Modules for state Template -->
+
+  <script src="~/lib/jquery/dist/jquery.js"></script>
+  <!-- Load jQuery migrate from CDN with fallback to local copy -->
+  <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+  <script>
+    //Fall back to local copy if no jQuery migrate found
+    if (typeof jQuery.migrateWarnings == 'undefined') { // or typeof jQuery.fn.live == 'undefined'
+      document.write(unescape("%3Cscript src='~catemp/js/libs/jquery-migrate-3.0.1.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+
+  </script>
+
+  <script src="~/catemp/js/cagov.core.js"></script>
+
+  <script src="~/js/site.min.js" asp-append-version="true"></script>
+
+  <environment include="Development">
+    <!--  <script src="~/lib/jquery/dist/jquery.js"></script>
+      <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>-->
+    <!-- <script src="~/js/site.js" asp-append-version="true"></script>-->
+  </environment>
+  <environment exclude="Development">
+    <!--  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+              asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+              asp-fallback-test="window.jQuery"
+              crossorigin="anonymous"
+              integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+      </script>-->
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+             asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+             asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+             crossorigin="anonymous"
+             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+     </script>-->
+    <!--<script src="~/js/site.min.js" asp-append-version="true"></script>-->
+  </environment>
+
+  @RenderSection("Scripts", required: false)
+</body>
+
 </html>

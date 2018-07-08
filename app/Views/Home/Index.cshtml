@@ -1,583 +1,574 @@
 @{
-ViewData["Title"] = "home";
+  ViewData["Title"] = "home";
 }
+
+
 <html class="no-js" lang="en">
-	<!--<![endif]-->
-	<!-- Set thet  two-column-->
-	<body class="primary">
-		<div id="skip-to-content">
-			<a href="#main-content">Skip to Main Content</a>
-		</div>
-		<div class="location-settings section section-standout collapse collapsed " id="locationSettings">
-			<div class="container p-y">
-				<button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
-				<span aria-hidden="true">
-					&times;
-				</span>
-				</button>
-				<div class="form-group form-inline">
-					<label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
-					<input type="text" class="form-control" id="locationZipCode" placeholder="Zip Code">
-					<button type="button" class="btn btn-primary">Set Location</button>
-				</div>
-			</div>
-		</div>
-		<!-- Settings Bar -->
-		<div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
-			<div class="container  p-y">
-				<button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close">
-				<span aria-hidden="true">
-					&times;
-				</span>
-				</button>
-				<div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary disableHighContrastMode">Default</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary enableHighContrastMode">High Contrast</button>
-					</div>
-				</div>
-				<div class="btn-group" role="group" aria-label="textSizeMode">
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary resetTextSize">Reset</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary increaseTextSize">
-						<span class="hidden-xs">
-							Increase Font Size
-						</span>
-						<span class="visible-xs">
-							Font <small class="ca-gov-icon-plus-line"></small>
-						</span>
-						</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-primary decreaseTextSize">
-						<span class="hidden-xs">
-							Decrease Font Size
-						</span>
-						<span class="visible-xs">
-							Font <small class="ca-gov-icon-minus-line"></small>
-						</span>
-						</button>
-					</div>
-				</div>
-				<!-- <button type="button" class="btn btn-primary clipboard-activeonhover">Save links on hover</button> -->
-			</div>
-		</div>
-		<!-- Alert Banner -->
-		<!-- Utility Header-->
-		<div class="navigation-search">
-			<div id="head-search" class="search-container  fade">
-				<form action="/api/sitecore/Search/Search" id="local_form" method="post">
-					<div class="textfield-container">
-						<label for="search_local_textfield" accesskey="s" class="hidden">Search this site: </label>
-						<input type="hidden" id="quick-search-tab" name="tab" value="content" />
-						<input data-search-id="_quick" type="text" name="search_local_textfield" id="search_local_textfield" class="search-textfield" size="35" autocomplete="off" placeholder="Search Content, Documents and More..." />
-					</div>
-					<div class="submit-container">
-						<button type="submit">
-						<span class="ca-gov-icon-search">
-							<span class="sr-only">
-								Search
-							</span>
-						</span>
-						</button>
-					</div>
-					<button type="button" class="close close-search" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">
-						×
-					</span>
-					</button>
-				</form>
-			</div>
-      <nav id="navigation" class="main-navigation megadropdown auto-highlight mobile-closed">
-        <ul id="nav_list" class="top-level-nav">
-          <li class="home-link nav-item">
-            <a href="/" class="first-level-link">
-              <span id="nav_home_container" class="ca-gov-icon-home" aria-hidden="true">
-              </span>
-              <span class="sr-only">
-                Home
-              </span>
-              Home
-            </a>
-          </li>
-        </ul>
-      </nav>
-		</div>
-		<div class="header-decoration">
-		</div>
-		<div id="main-content" class="main-content">
-			<div class="section-understated">
-				<div class="container  ">
-					<img class="img-responsive " src="/images/fusion2.jpg" alt="Image">
-				</div>
-			</div>
-			<main class="main-primary">
-			<div class="section section-default">
-				<div class="container">
-					<div class="group">
-						<div class="third ">
-							<div class="detail clearfix content-title">
-								<h2>I Want To ...</h2>
-								<div class="description">
-									<div class="rich-text">
-										<ul class="list-divided">
-											<li>
-												<a href="https://www.surveymonkey.com/r/cafusion2018">Help make California Digital Services</a> 
-											</li>
-											<li>
-												<a href="">Become an Agency Partner</a> 
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="third ">
-							<div class="detail clearfix content-title">
-								<h2>Current User Tests</h2>
-								<div class="description">
-									<div class="rich-text">
-										<ul class="list-divided">
-											<li>
-												<a href="https://participate.lookback.io/7JKwqf">  Student Aid Website User test</a> 
-											</li>
-											<li>
-												<a href="https://participate.lookback.io/G3vWoj">  Franchise Tax Board Website User test</a> 
-											</li>
-											<li>
-												<a href="https://participate.lookback.io/B5rf2r">  Department of Technology Website User test</a> 
-											</li>
-											<li>
-												<a href="https://participate.lookback.io/NAAtuh">  Department of Social Services Website User test</a> 
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="third ">
-							<div class="detail clearfix content-title">
-								<h2>Explore the Numbers</h2>
-								<div class="description">
-									<div class="rich-text">
-										<p>Energy Commission 2018 Survey Results&nbsp;<img alt="" src="" style="left: 256px; top: 36.6667px; width: 387px; height: 321px;" /></p>
-										<p>Secretary of State 2017 Survey Results&nbsp;<img alt="" src="" style="left: 256px; top: 36.6667px; width: 387px; height: 321px;" /></p>
-										<p>&nbsp;</p>
-										<p><a href="">More Survey Numbers &gt;&gt;</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section section-primary">
-				<div class="container">
-					<div class="row">
-						<div class="p-b-md">
-							<div class="text-center">
-								<h2>Upcoming Events</h2>
-							</div>
-						</div>
-					</div>
-					<div class="group">
-						<div class="col-md-12 ">
-							<!-- Begin Upcoming Events -->
-							<div class="special-announcements">
-								<!-- TITLE -->
-								<!-- CALENDAR ITEMS -->
+<!--<![endif]-->
+<!-- Set thet  two-column-->
+<body class="primary">
+
+  <div id="skip-to-content">
+    <a href="#main-content">Skip to Main Content</a>
+  </div>
+
+  <div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+    <div class="container p-y">
+      <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="form-group form-inline">
+        <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+        <input type="input" class="form-control" id="locationZipCode" placeholder="Zip Code">
+        <button type="button" class="btn btn-primary">Set Location</button>
+      </div>
+    </div>
+  </div>
+  <!-- Alert Banner -->
+  <!-- Utility Header-->
+
+
+  <div id="head-search" class="search-container  fade">
+    <form action="/api/sitecore/Search/Search" id="local_form" method="post">
+      <div class="textfield-container">
+        <label for="search_local_textfield" accesskey="s" class="hidden">Search this site: </label>
+        <input type="hidden" id="quick-search-tab" name="tab" value="content" />
+        <input data-search-id="_quick" type="text" name="search_local_textfield" id="search_local_textfield" class="search-textfield" size="35" autocomplete="off" placeholder="Search Content, Documents and More..." />
+      </div>
+      <div class="submit-container">
+        <button type="submit"><span class="ca-gov-icon-search"><span class="sr-only">Search</span></span></button>
+      </div>
+      <button type="button" class="close close-search" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </form>
+  </div>
+
+
+  <div class="header-decoration"></div>
+
+
+  <div id="main-content" class="main-content">
+
+    <div class="section-understated">
+      <div class="container  ">
+        <img class="img-responsive " src="/images/fusion2.jpg" alt="Image">
+
+      </div>
+    </div>
+
+
+
+
+    <main class="main-primary">
+
+
+
+      <div class="section section-default">
+        <div class="container">
+
+          <div class="group">
+            <div class="third ">
+
+              <div class="detail clearfix content-title">
+                <h2>I Want To ...</h2>
+                <div class="description">
+                  <div class="rich-text">
+                    <ul class="list-divided">
+                      <li> <a href="https://www.surveymonkey.com/r/cafusion2018">Help make California Digital Services</a> </li>
+
+                      <li> <a href="">Become an Agency Partner</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="third ">
+
+              <div class="detail clearfix content-title">
+                <h2>Current User Tests</h2>
+                <div class="description">
+                  <div class="rich-text">
+                    <ul class="list-divided">
+                      <li>  <a href="https://participate.lookback.io/7JKwqf">  Student Aid Website User test</a> </li>
+                      <li>  <a href="https://participate.lookback.io/G3vWoj">  Franchise Tax Board Website User test</a> </li>
+                      <li>  <a href="https://participate.lookback.io/B5rf2r">  Department of Technology Website User test</a> </li>
+                      <li>  <a href="https://participate.lookback.io/NAAtuh">  Department of Social Services Website User test</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="third ">
+
+              <div class="detail clearfix content-title">
+                <h2>Explore the Numbers</h2>
+                <div class="description">
+                  <div class="rich-text">
+                    <p>Energy Commission 2018 Survey Results&nbsp;<img alt="" src="" style="left: 256px; top: 36.6667px; width: 387px; height: 321px;" /></p>
+                    <p>Secretary of State 2017 Survey Results&nbsp;<img alt="" src="" style="left: 256px; top: 36.6667px; width: 387px; height: 321px;" /></p>
+                    <p>&nbsp;</p>
+                    <p><a href="">More Survey Numbers &gt;&gt;</a></p>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="section section-primary">
+        <div class="container">
+          <div class="row">
+            <div class="p-b-md">
+              <div class="text-center">
+
+                <h2>Upcoming Events</h2>
+
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <div class="col-md-12 ">
+
+              <!-- Begin Upcoming Events -->
+              <div class="special-announcements">
+                <!-- TITLE -->
+                <!-- CALENDAR ITEMS -->
                 <div class="row p-b-md">
                   <!-- icon v3 -->
                   <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
                     <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                     <symbol id="calendar-icon" viewBox="0 0 65 70">
-                      <title>
-                        calendar-icon
-                      </title>
+                      <title>calendar-icon</title>
                       <path d="M58.4,4.4h-2.3c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-2,0.9-2,2c0,0.2,0.1,0.4,0.1,0.6h-7.5C45,4.2,45,4,45,3.8
-									c0-1.1-0.9-2-2-2s-1.9,0.9-1.9,2c0,0.2,0,0.4,0.1,0.6h-7.5c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2c-1.1,0-2,0.9-2,2
-									c0,0.2,0.1,0.4,0.1,0.6h-7.5c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-2,0.9-2,2c0,0.2,0.1,0.4,0.1,0.6h-7.5
-									c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-1.9,0.9-1.9,2c0,0.2,0,0.4,0.1,0.6H5.6C2.5,4.4,0,6.9,0,10v52.8c0,3.1,2.5,5.6,5.6,5.6
-									H52l11.9-11.9V10C63.9,6.9,61.4,4.4,58.4,4.4z M60.9,55.2l-0.6,0.6h-4.8c-2.2,0-4.1,1.8-4.1,4.1v4.8l-0.6,0.6H5.6
-									c-1.4,0-2.5-1.1-2.5-2.5V12.2H61L60.9,55.2L60.9,55.2z" />
-                    </symbol>
+                	c0-1.1-0.9-2-2-2s-1.9,0.9-1.9,2c0,0.2,0,0.4,0.1,0.6h-7.5c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2c-1.1,0-2,0.9-2,2
+                	c0,0.2,0.1,0.4,0.1,0.6h-7.5c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-2,0.9-2,2c0,0.2,0.1,0.4,0.1,0.6h-7.5
+                	c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-1.9,0.9-1.9,2c0,0.2,0,0.4,0.1,0.6H5.6C2.5,4.4,0,6.9,0,10v52.8c0,3.1,2.5,5.6,5.6,5.6
+                	H52l11.9-11.9V10C63.9,6.9,61.4,4.4,58.4,4.4z M60.9,55.2l-0.6,0.6h-4.8c-2.2,0-4.1,1.8-4.1,4.1v4.8l-0.6,0.6H5.6
+                	c-1.4,0-2.5-1.1-2.5-2.5V12.2H61L60.9,55.2L60.9,55.2z" />
                   </svg>
+
+
+
+
                   <div class="col-sm-4">
+
                     <article class="event-item" itemscope itemtype="http://schema.org/Event">
                       <time class="start-date announcement-calendar" itemprop="startDate" datetime="">
                         <svg class="calendar-icon" width="50px" height="54px">
                           <use xlink:href="#calendar-icon" />
                         </svg>
-                        <div class="announcement-month"> Jun </div>
-                        <div class="announcement-day"> 29 </div>
+                        <div class="announcement-month">Jun</div>
+                        <div class="announcement-day">29</div>
                       </time>
                       <div class="announcement-teaser">
-                        <a href="" class="title" itemprop="url">
-                          <span itemprop="name">
-                            Santa Barabara citizens focus group ...
-                          </span>
-                        </a>
-                        <div class="description" itemprop="description">
-                          ...
-                        </div>
+                        <a href="" class="title" itemprop="url"><span itemprop="name">Santa Barabara citizens focus group ...</span></a>
+                        <div class="description" itemprop="description">  ...</div>
                       </div>
                     </article>
                   </div>
                   <div class="col-sm-4">
+
                     <article class="event-item" itemscope itemtype="http://schema.org/Event">
                       <time class="start-date announcement-calendar" itemprop="startDate" datetime="">
                         <svg class="calendar-icon" width="50px" height="54px">
                           <use xlink:href="#calendar-icon" />
                         </svg>
-                        <div class="announcement-month">
-                          Aug
-                        </div>
-                        <div class="announcement-day">
-                          29
-                        </div>
+                        <div class="announcement-month">Aug</div>
+                        <div class="announcement-day">29</div>
                       </time>
                       <div class="announcement-teaser">
-                        <a href="" class="title" itemprop="url">
-                          <span itemprop="name">
-                            San Diego focus group ...
-                          </span>
-                        </a>
-                        <div class="description" itemprop="description">
-                          ...
-                        </div>
+                        <a href="" class="title" itemprop="url"><span itemprop="name">San Diego focus group ...</span></a>
+                        <div class="description" itemprop="description">  ...</div>
                       </div>
                     </article>
                   </div>
                   <div class="col-sm-4">
+
                     <article class="event-item" itemscope itemtype="http://schema.org/Event">
                       <time class="start-date announcement-calendar" itemprop="startDate" datetime="">
                         <svg class="calendar-icon" width="50px" height="54px">
                           <use xlink:href="#calendar-icon" />
                         </svg>
-                        <div class="announcement-month">
-                          Aug
-                        </div>
-                        <div class="announcement-day">
-                          30
-                        </div>
+                        <div class="announcement-month">Aug</div>
+                        <div class="announcement-day">30</div>
                       </time>
                       <div class="announcement-teaser">
-                        <a href="" class="title" itemprop="url">
-                          <span itemprop="name">
-                            South Lake Tahoe focus group...
-                          </span>
-                        </a>
-                        <div class="description" itemprop="description">
-                          ...
-                        </div>
+                        <a href="" class="title" itemprop="url"><span itemprop="name">South Lake Tahoe focus group...</span></a>
+                        <div class="description" itemprop="description">  ...</div>
                       </div>
                     </article>
                   </div>
+
                 </div>
-							</div>
-							<!-- End Upcoming Events -->
-						</div>
-					</div>
-					<div class="row">
-						<div class="p-t-sm">
-							<div class="text-center">
-								<a href="/News/Events" class="btn btn-primary">More Events >></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section section-inverted">
-				<div class="parallax-bg" style="background-image:url('')">
-				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-8 col-sm-offset-2 text-center">
-							<h2 class="h1">The Fusion Mission</h2>
-							<p class="lead"><em><h4>
-							<span>
-								agencies, to benefit the state&rsquo;s people and enhance the . 
-							</span>
-							</h4></em></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section section-">
-				<div class="container">
-					<div class="group">
-						<div class="col-md-12 ">
-							<!-- BLOGS -->
-							<div class="row">
-								<div class="third">
-									<!-- Begin Blog Feature -->
-									<article class="blog-post-teaser">
-									<div class="post-image">
-										<a href="" title="">
-										<picture>
-										<!-- IE9 doesn't support picture srcset -->
-										<!--[if IE 9]><video style="display: none;"><![endif]-->
-										<source srcset="" media="(min-width: 768px)">
-										<source srcset="" media="(max-width: 767px)">
-										<!--[if IE 9]></video><![endif]-->
-										<img src="" alt="Image">
-										</picture>
-										</a>
-									</div>
-									<div class="post">
-										<h3><a href=""> ...</a></h3>
-										<div class="summary">
-											<p>.</p>
-										</div>
-										<p class="post-date">Jun 28, 2018</p>
-										<a href="" class="read-more">Read More 
-										<span class="ca-gov-icon-arrow-next">
-										</span>
-										</a>
-									</div>
-									</article>
-								</div>
-								<div class="third">
-									<!-- Begin Blog Feature -->
-									<article class="blog-post-teaser">
-									<div class="post-image">
-										<a href="" title="">
-										<picture>
-										<!-- IE9 doesn't support picture srcset -->
-										<!--[if IE 9]><video style="display: none;"><![endif]-->
-										<source srcset="" media="(min-width: 768px)">
-										<source srcset="" media="(max-width: 767px)">
-										<!--[if IE 9]></video><![endif]-->
-										<img src="" alt="">
-										</picture>
-										</a>
-									</div>
-									<div class="post">
-										<h3><a href="">State’s Rol ...</a></h3>
-										<div class="summary">
-											<p>Technology in California ...</p>
-										</div>
-										<p class="post-date">Jun 26, 2018</p>
-										<a href="" class="read-more">Read More 
-										<span class="ca-gov-icon-arrow-next">
-										</span>
-										</a>
-									</div>
-									</article>
-								</div>
-								<div class="third">
-									<!-- Begin Blog Feature -->
-									<article class="blog-post-teaser">
-									<div class="post">
-										<h3><a href="">  Report Released</a></h3>
-										<div class="summary">
-											<p>Data. ...</p>
-										</div>
-										<p class="post-date">May 31, 2018</p>
-										<a href="" class="read-more">Read More 
-										<span class="ca-gov-icon-arrow-next">
-										</span>
-										</a>
-									</div>
-									</article>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="p-t-sm">
-							<div class="text-center">
-								<a href="/News/Blog" class="btn btn-default">More Blogs >></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section section-primary">
-				<div class="container">
-					<div class="group">
-						<div class="quarter ">
-							<div class="stat-counter ">
-								<span class="unit">
-								</span>
-								<span class="number-counter">
-									37
-								</span>
-								<span class="unit">
-									%
-								</span>
-							</div>
-							<p class="text-center">Statewide Survey totals, percent as of April 23, 2018</p>
-						</div>
-						<div class="quarter ">
-							<div class="stat-counter ">
-								<span class="unit">
-								</span>
-								<span class="number-counter">
-									10.7
-								</span>
-								<span class="unit">
-									b
-								</span>
-							</div>
-							<p class="text-center">...</p>
-						</div>
-						<div class="quarter ">
-							<div class="stat-counter ">
-								<span class="unit">
-								</span>
-								<span class="number-counter">
-									561,801
-								</span>
-								<span class="unit">
-								</span>
-							</div>
-							<p class="text-center">Visitors at our 3 Focus Group Centers in 2018</p>
-						</div>
-						<div class="quarter ">
-							<div class="stat-counter ">
-								<span class="unit">
-								</span>
-								<span class="number-counter">
-									705
-								</span>
-								<span class="unit">
-								</span>
-							</div>
-							<p class="text-center">Total Survey Counts</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="section section-">
-				<div class="container">
-					<div class="row">
-						<div class="p-b-md">
-							<div class="text-center">
-								<h2>Connect</h2>
-							</div>
-						</div>
-					</div>
-					<div class="group">
-						<div class="col-md-12 ">
-							<div class="row">
-								<div class="text-center">
-									<ul class="list-inline icon-lg">
-										<li>
-											<a href="https://www.facebook.com/" target="_blank" aria-label="facebook">
-											<span class="ca-gov-icon-facebook">
-											</span>
-											</a>
-										</li>
-										<li>
-											<a href="https://twitter.com/" target="_blank" aria-label="twitter">
-											<span class="ca-gov-icon-twitter">
-											</span>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.instagram.com/" target="_blank" aria-label="instagram">
-											<span class="ca-gov-icon-instagram">
-											</span>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.youtube.com/user/" target="_blank" aria-label="youtube">
-											<span class="ca-gov-icon-youtube">
-											</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			</main>
-		</div>
-		<div class="section section-impact section-footer">
-			<div class="container">
-				<div class="row group">
-					<div class="quarter" style="height: 223px;">
-						<h4>About</h4>
-						<ul class="list-standout">
-							<li>
-								<a href="/Home/About" target="">About</a>
-							</li>
-							<li>
-								<a href="/Home/Contact" target="">Contact</a>
-							</li>
-						</ul>
-					</div>
-					<div class="quarter" style="height: 223px;">
-						<h4>Campaigns</h4>
-						<ul class="list-standout">
-							<li>
-								<a href="http://registertovote.ca.gov" target="_blank">Register to vote</a>
-							</li>
-							<li>
-								<a href="http://www.flexalert.org" target="_blank">Flex Alert</a>
-							</li>
-						</ul>
-					</div>
-					<div class="quarter" style="height: 223px;">
-						<h4>Support</h4>
-						<ul class="list-standout">
-							<li>
-								<a href="/Home/Help" target="">Help</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="row group m-t-md">
-					<div class="third">
-						<div class="profile-banner profile-banner-dk" itemscope itemtype="http://schema.org/Person">
-							<div class="inner" style="background:url(/-/media/DWR-Website/Web-Pages/Images/Profile-Banner-Images/banner_jerry-brown-dk-v2.png) no-repeat right bottom">
-								<div class="banner-subtitle">
-									Office of Governor
-								</div>
-								<div class="banner-title" itemprop="name">
-									Edmund G. Brown Jr.
-								</div>
-								<div class="banner-link">
-									<a href="https://www.gov.ca.gov/home.php" target="_blank" itemprop="url">Visit Governor Website</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Global Footer -->
-		<!-- Extra Decorative Content -->
-		<div class="decoration-last">
-			&nbsp;
-		</div>
-		<!-- Extra Decorative Content -->
-		<div class="decoration-last">
-			&nbsp;
-		</div>
-		<!-- Load jQuery from CDN with fallback to local copy -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-		<script>
+
+              </div>
+              <!-- End Upcoming Events -->
+
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="p-t-sm">
+              <div class="text-center">
+                <a href="/News/Events" class="btn btn-primary">More Events >></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-inverted">
+        <div class="parallax-bg" style="background-image:url('')"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+              <h2 class="h1">The Fusion Mission</h2>
+              <p class="lead"><em><h4><span> agencies, to benefit the state&rsquo;s people and enhance the . </span></h4></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="section section-">
+        <div class="container">
+          <div class="group">
+            <div class="col-md-12 ">
+              <!-- BLOGS -->
+              <div class="row">
+                <div class="third">
+                  <!-- Begin Blog Feature -->
+                  <article class="blog-post-teaser">
+
+                    <div class="post-image">
+                      <a href="" title="">
+                        <picture>
+                          <!-- IE9 doesn't support picture srcset -->
+                          <!--[if IE 9]><video style="display: none;"><![endif]-->
+                          <source srcset="" media="(min-width: 768px)">
+                          <source srcset="" media="(max-width: 767px)">
+                          <!--[if IE 9]></video><![endif]-->
+                          <img src="" alt="Image">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="post">
+
+                      <h3><a href=""> ...</a></h3>
+
+
+                      <div class="summary">
+
+                        <p>.</p>
+
+                      </div>
+                      <p class="post-date">Jun 28, 2018</p>
+                      <a href="" class="read-more">Read More <span class="ca-gov-icon-arrow-next"></span></a>
+                    </div>
+                  </article>
+                </div>
+                <div class="third">
+                  <!-- Begin Blog Feature -->
+                  <article class="blog-post-teaser">
+
+                    <div class="post-image">
+                      <a href="" title="">
+                        <picture>
+                          <!-- IE9 doesn't support picture srcset -->
+                          <!--[if IE 9]><video style="display: none;"><![endif]-->
+                          <source srcset="" media="(min-width: 768px)">
+                          <source srcset="" media="(max-width: 767px)">
+                          <!--[if IE 9]></video><![endif]-->
+                          <img src="" alt="">
+                        </picture>
+                      </a>
+                    </div>
+                    <div class="post">
+
+                      <h3><a href="">State’s Rol ...</a></h3>
+
+
+                      <div class="summary">
+
+                        <p>Technology in California ...</p>
+
+                      </div>
+                      <p class="post-date">Jun 26, 2018</p>
+                      <a href="" class="read-more">Read More <span class="ca-gov-icon-arrow-next"></span></a>
+                    </div>
+                  </article>
+                </div>
+                <div class="third">
+                  <!-- Begin Blog Feature -->
+                  <article class="blog-post-teaser">
+
+
+                    <div class="post">
+
+                      <h3><a href="">  Report Released</a></h3>
+
+
+                      <div class="summary">
+
+                        <p>Data. ...</p>
+
+                      </div>
+                      <p class="post-date">May 31, 2018</p>
+                      <a href="" class="read-more">Read More <span class="ca-gov-icon-arrow-next"></span></a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="p-t-sm">
+              <div class="text-center">
+                <a href="/News/Blog" class="btn btn-default">More Blogs >></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="section section-primary">
+        <div class="container">
+          <div class="group">
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">37</span><span class="unit">%</span>
+              </div>
+              <p class="text-center">Statewide Survey totals, percent as of April 23, 2018</p>
+            </div>
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">10.7</span><span class="unit">b</span>
+              </div>
+              <p class="text-center">...</p>
+
+
+            </div>
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">561,801</span><span class="unit"></span>
+              </div>
+              <p class="text-center">Visitors at our 3 Focus Group Centers in 2018</p>
+
+            </div>
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">705</span><span class="unit"></span>
+              </div>
+              <p class="text-center">Total Survey Counts</p>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="section section-">
+        <div class="container">
+          <div class="row">
+            <div class="p-b-md">
+              <div class="text-center">
+
+                <h2>Connect</h2>
+
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <div class="col-md-12 ">
+              <div class="row">
+                <div class="text-center">
+                  <ul class="list-inline icon-lg">
+                    <li>
+                      <a href="https://www.facebook.com/" target="_blank" aria-label="facebook">
+                        <span class="ca-gov-icon-facebook"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com/" target="_blank" aria-label="twitter">
+                        <span class="ca-gov-icon-twitter"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/" target="_blank" aria-label="instagram">
+                        <span class="ca-gov-icon-instagram"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/user/" target="_blank" aria-label="youtube">
+                        <span class="ca-gov-icon-youtube"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+
+
+
+  <div class="section section-impact section-footer">
+    <div class="container">
+      <div class="row group">
+
+
+
+
+        <div class="quarter" style="height: 223px;">
+          <h4>About</h4>
+          <ul class="list-standout">
+
+
+
+
+            <li>
+              <a href="/Home/About" target="">About</a>
+            </li>
+
+
+            <li>
+              <a href="/Home/Contact" target="">Contact</a>
+            </li>
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+
+
+
+
+
+
+        <div class="quarter" style="height: 223px;">
+          <h4>Campaigns</h4>
+          <ul class="list-standout">
+
+
+
+            <li>
+              <a href="http://registertovote.ca.gov" target="_blank">Register to vote</a>
+            </li>
+
+
+
+            <li>
+              <a href="http://www.flexalert.org" target="_blank">Flex Alert</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+
+
+        <div class="quarter" style="height: 223px;">
+          <h4>Support</h4>
+          <ul class="list-standout">
+
+
+
+
+
+            <li>
+              <a href="/Home/Help" target="">Help</a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+      <div class="row group m-t-md">
+
+        <div class="third">
+          <div class="profile-banner profile-banner-dk" itemscope itemtype="http://schema.org/Person">
+            <div class="inner" style="background:url() no-repeat right bottom">
+              <div class="banner-subtitle">Office of Governor</div>
+              <div class="banner-title" itemprop="name">Edmund G. Brown Jr.</div>
+              <div class="banner-link"><a href="https://www.gov.ca.gov/home.php" target="_blank" itemprop="url">Visit Governor Website</a></div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Global Footer -->
+  <!-- Extra Decorative Content -->
+  <div class="decoration-last">&nbsp;</div>
+
+  <!-- Extra Decorative Content -->
+  <div class="decoration-last">&nbsp;</div>
+  <!-- Load jQuery from CDN with fallback to local copy -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+  <script>
     //Fall back to local copy if no jquery found
     if (typeof jQuery == 'undefined') {
       document.write(unescape("%3Cscript src='/js/libs/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E"));
     }
-		</script>
-		<script src="/js/libs/jquery.mask.min.js"></script>
-		<!-- Load template core -->
-		<script src="/js/dwr.core.js"></script>
-		<script src="/js/search.dwr.core.js"></script>
-		<script src="/js/mapthat.dwr.core.js"></script>
-		<script src="/js/relatednews.dwr.core.js"></script>
-		<script src="/js/calculator.js"></script>
-		<script type="text/javascript">
+  </script>
+
+  <script src="/js/libs/jquery.mask.min.js"></script>
+
+  <!-- Load template core -->
+  <script src="/js/dwr.core.js"></script>
+  <script src="/js/search.dwr.core.js"></script>
+  <script src="/js/mapthat.dwr.core.js"></script>
+  <script src="/js/relatednews.dwr.core.js"></script>
+  <script src="/js/calculator.js"></script>
+
+
+
+
+  <script type="text/javascript">
     //Google Analytics script for Tracking
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'xxx']);
@@ -594,6 +585,9 @@ ViewData["Title"] = "home";
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-		</script>
+  </script>
+
+
 </body>
+
 </html>
