@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace app.Models
 {
-    public partial class FusionAppContext : DbContext
+  // The following constructor will allow configuration to be passed into
+  // the context by dependency injection
+  public partial class FusionAppContext : DbContext
     {
         public FusionAppContext()
         {
         }
 
-    // The following constructor will allow configuration to be passed into
-    // the context by dependency injection
-    public FusionAppContext(DbContextOptions<FusionAppContext> options)
+        public FusionAppContext(DbContextOptions<FusionAppContext> options)
             : base(options)
         {
         }
@@ -26,17 +26,9 @@ namespace app.Models
         public virtual DbSet<Testers> Testers { get; set; }
         public virtual DbSet<TestOpportunities> TestOpportunities { get; set; }
         public virtual DbSet<TestOutcomes> TestOutcomes { get; set; }
+        
 
-    //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    //        {
-    //            if (!optionsBuilder.IsConfigured)
-    //            {
-    //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-    //                optionsBuilder.UseSqlServer("Data Source=sql11.ezhostingserver.com;Initial Catalog=gwad;Persist Security Info=True;User ID=admgwad;Password=Genesis1968@");
-    //            }
-    //        }
-   
-     protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DimDate>(entity =>
             {

@@ -1,0 +1,139 @@
+# Digital Services Academy - (2018) Team Fusion Prototype
+
+## Challenge:
+
+Civic User Testing Portal
+
+## Prototype URL:
+http://ca-fusion-web-ca-fusion-project.7e14.starter-us-west-2.openshiftapps.com/
+
+## Team
+#### a. One accountable leader
+
+We established a Delivery Lead, Koji Kumpulainien, at the outset. Koji acted as Product Owner, prioritizing work, providing input, and acting as the driver to deliver a MVP.
+
+#### b. Multidisciplinary and collaborative team 
+
+We assembled a multidisciplinary and collaborative team that included the following roles:
+
+1. Delivery Lead - Koji Kumpulainien
+2. Product Manager - Koji Kumpulainien
+3. Technical Architect - Ashok Bhatla, LaJuan Taylor
+4. Interaction Designer/User Researcher/Usability Test - Catalina Guillen, Jake Nesom
+5. Visual Designer - Koji Kumpulainien
+6. Front End Web Developer - Koji Kumpulainien, Jake Nesom
+7. Backend Web Developer - Jake Nesom, Catalina Guillen, LaJuan Taylor
+8. DevOps Engineer - Ashok Bhatla, Catalina Guillen, LaJuan Taylor
+9. Scrum Master - Koji Kumpulainien
+
+## Design Process
+
+#### c. Understand people’s needs
+
+In order to ensure the design was tailored specifically to user needs, we evaluated similar solutions across government and private entities. In addition, we consulted other peers, family members, and friends for balanced input. 
+
+All Team Members provided input on the initial design concept as well as for user testing.
+
+#### d. "Human-centered design" techniques or tools
+
+We used the following techniques to incorporate our human-centered design process...
+Research: Review of websites that reflected good and bad human-centered design. 
+We also reccommend that by periodically engaging with current and former civic user testers a progressive forward thinking roadmap can be created for furture CA Digital Services. 
+
+User Survey: To get an understanding of civic users needs, and to balance qualitative with quantitative feedback, we also reccommend that an initial survey is conducted to recruit poetential civic testers across our State. 
+A demographic drill down on the data collected could be used to observe emerging trends about what is important to civic users of CA State Digital Services. 
+Concept Validation: With an overall concept of the service in mind, we discussed high-level sketches and drawings within Team Fusion. We solicited feedback early and often, spotting necessary changes soon and pivoting quickly in response. Concept validation helped make the design process efficient, iterative and accurate.
+
+#### e. Design style guide 
+
+Style guides were used to facilitate consistency in look and feel, as well as to streamline handoffs between design and development. To maximize efficiency, we kept the style guide lean and functional, and subsequent improvements were made in rapid and close dialog between team members. Our style guides were consistent with other standard style guides such as the USDS Federal style guide. 
+
+#### f. Usability tests
+
+We conducted user testing to validate and insure that the completed designs were usable and understandable.
+
+## Development Process
+#### g. Iterative development
+
+We began the project by defining the request and receiving an overview from the product owner. We established the cadence, roles, and responsibilities of this agile development effort. We implemented XX week sprints to divide the output into finite iterations while providing enough time to make meaningful progress during each iteration. 
+
+After establishing the initial user stories, the team focused on implementing the technical infrastructure to support them, while also engaging in user research to further refine and prioritize those stories. This process involved capturing feedback across multiple iterations from users, the product owner, and project team as the stories moved from sketches to wireframes to visual designs. 
+
+Technical development followed a similar cycle with elements of the complete application being deployed for review, testing and feedback as soon as they were available.  Usability testing and development happened in parallel as the team moved forward towards an MVP release. Feedback that couldn’t be supported for a release was captured in the backlog for consideration in subsequent iterations. 
+
+## Technology
+#### h. Responsive design
+
+Our front end code is fully responsive and tested across multiple browsers and device sizes, as well as to support accessibility needs.
+
+#### i. Open licensed technologies
+
+### Front End
+  * bootstrap 3.3.7
+	* jquery-migrate-3.0.1.min.js
+	* modernizr-2.0.6.min.js
+	* modernizr-extra.min.js
+	* cagov.core.css
+	* colorscheme-mono.css	
+  
+### Server Side Language
+  *  C# .NET Core MVC
+  
+### Infrastructure
+  * RedHat OpehShift (Container Platform)
+  * Azure (SQL Server Database)
+	* AWS Public Cloud 
+
+## Environment
+#### j. Infrastructure provider
+
+Deployed on RedHat OpenShift Developer Account, using shared AWS public cloud for the app. 
+
+#### k. Automated unit tests 
+
+Unit tests were used to validate key functionality.
+
+#### l. Continuous integration
+
+Dockerfiles used to reliably set up containerized server environment for continuous deployment. Deployments are automatically triggered by GitHub WebHook, pulled from the latest develop branch, built into a container and deployed.
+
+#### m. Configuration management
+
+OpenShift Source2Image feature was used to configure development and deployment images.
+
+#### n. Continuous monitoring
+
+RedHat monitoring was set up to monitor server and application availability and performance. 
+
+#### o. Container deployment
+
+Application deployed to a Docker container as part of CI deployment.
+
+## More information
+For more details and artifacts related to our process, see: https://github.com/
+
+To see how we followed the USDS Playbook to build our service, see: https://github.com/
+
+## Project Resources
+  - [ASP.NET Core](https://github.com/aspnet/Home)
+  - [Visual Studio Code](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)
+  - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+## Setup
+#### p. Instructions
+
+  * [Install Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
+  * [Install GitHub Extension for Visual Studio] (https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
+  * Clone repository '$ git clone https://github.com/jakeNesom/ca-fusion.git'
+  * First Sign up for a [RedHat Developer Account](https://developers.redhat.com/)
+  * Second use Developer ID to Sign up for a [RedHat OpenShift Account](https://www.openshift.com/)
+  * Create Source2Image Project https://docs.openshift.com/online/creating_images/s2i.html#creating-images-s2i
+  * Configure login credentials between OpenShift and GitHub if using a private repository (Optional)
+  * Add WebHook from OpenShift Project to your personal GitHub Respository (Optional)
+  * Note: You have to manually click to rebuild container after source changes if the process is not automated. 
+
+### VISUAL STUDIO:
+  ### Tools > NuGet Package Manager > Package Manager Console:  
+	* Install-Package Microsoft.EntityFrameworkCore.SqlServer
+	* Install-Package Microsoft.EntityFrameworkCore.Tools
+	* Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design (optional if not present)
