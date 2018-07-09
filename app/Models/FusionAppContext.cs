@@ -4,32 +4,100 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace app.Models
 {
-  // The following constructor will allow configuration to be passed into
-  // the context by dependency injection
-  public partial class FusionAppContext : DbContext
+    public partial class FusionAppContext : DbContext
     {
         public FusionAppContext()
         {
         }
 
-        public FusionAppContext(DbContextOptions<FusionAppContext> options)
+    // The following constructor will allow configuration to be passed into
+    // the context by dependency injection
+    public FusionAppContext(DbContextOptions<FusionAppContext> options)
             : base(options)
         {
         }
 
+        public virtual DbSet<Agencies> Agencies { get; set; }
+        public virtual DbSet<AgencyProfiles> AgencyProfiles { get; set; }
+        public virtual DbSet<CitizenProfiles> CitizenProfiles { get; set; }
+        public virtual DbSet<Citizens> Citizens { get; set; }
         public virtual DbSet<DimDate> DimDate { get; set; }
         public virtual DbSet<DimTime> DimTime { get; set; }
         public virtual DbSet<FakeTesters> FakeTesters { get; set; }
-        public virtual DbSet<Organizations> Organizations { get; set; }
         public virtual DbSet<TestEnrollment> TestEnrollment { get; set; }
-        public virtual DbSet<TesterProfiles> TesterProfiles { get; set; }
-        public virtual DbSet<Testers> Testers { get; set; }
         public virtual DbSet<TestOpportunities> TestOpportunities { get; set; }
         public virtual DbSet<TestOutcomes> TestOutcomes { get; set; }
-        
 
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Agencies>(entity =>
+            {
+                entity.HasKey(e => e.AgencyId);
+
+                entity.Property(e => e.AgencyName).HasMaxLength(250);
+
+                entity.Property(e => e.AgencyUrl).HasMaxLength(500);
+            });
+
+            modelBuilder.Entity<AgencyProfiles>(entity =>
+            {
+                entity.HasKey(e => e.AgencyProfileId);
+
+                entity.Property(e => e.AgencySection).HasMaxLength(150);
+
+                entity.Property(e => e.City).HasMaxLength(100);
+
+                entity.Property(e => e.Email).HasMaxLength(150);
+
+                entity.Property(e => e.Password).HasMaxLength(150);
+
+                entity.Property(e => e.State).HasMaxLength(100);
+
+                entity.Property(e => e.ZipCode).HasMaxLength(20);
+            });
+
+            modelBuilder.Entity<CitizenProfiles>(entity =>
+            {
+                entity.HasKey(e => e.CitizenProfileId);
+
+                entity.Property(e => e.Age).HasMaxLength(10);
+
+                entity.Property(e => e.City).HasMaxLength(100);
+
+                entity.Property(e => e.Gender).HasMaxLength(10);
+
+                entity.Property(e => e.Password).HasMaxLength(150);
+
+                entity.Property(e => e.State).HasMaxLength(100);
+
+                entity.Property(e => e.ZipCode).HasMaxLength(20);
+
+                entity.HasOne(d => d.Citizen)
+                    .WithMany(p => p.CitizenProfiles)
+                    .HasForeignKey(d => d.CitizenId)
+                    .HasConstraintName("FK_dbo.TesterProfiles_dbo.Testers_TesterId");
+            });
+
+            modelBuilder.Entity<Citizens>(entity =>
+            {
+                entity.HasKey(e => e.CitizenId);
+
+                entity.Property(e => e.Email).HasMaxLength(200);
+
+                entity.Property(e => e.FirstName).HasMaxLength(100);
+
+                entity.Property(e => e.IsConfirmed)
+                    .IsRequired()
+                    .HasMaxLength(10)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("('No')");
+
+                entity.Property(e => e.LastName).HasMaxLength(100);
+
+                entity.Property(e => e.Phone).HasMaxLength(50);
+            });
+
             modelBuilder.Entity<DimDate>(entity =>
             {
                 entity.Property(e => e.Id)
@@ -172,15 +240,6 @@ namespace app.Models
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Organizations>(entity =>
-            {
-                entity.HasKey(e => e.OrganizationId);
-
-                entity.Property(e => e.OrgName).HasMaxLength(250);
-
-                entity.Property(e => e.OrgUrl).HasMaxLength(500);
-            });
-
             modelBuilder.Entity<TestEnrollment>(entity =>
             {
                 entity.HasKey(e => e.TestId);
@@ -202,47 +261,6 @@ namespace app.Models
                     .HasConstraintName("FK_TestEnrollment_Testers");
             });
 
-            modelBuilder.Entity<TesterProfiles>(entity =>
-            {
-                entity.HasKey(e => e.TesterProfileId);
-
-                entity.Property(e => e.Age).HasMaxLength(10);
-
-                entity.Property(e => e.City).HasMaxLength(100);
-
-                entity.Property(e => e.Gender).HasMaxLength(10);
-
-                entity.Property(e => e.Password).HasMaxLength(50);
-
-                entity.Property(e => e.State).HasMaxLength(100);
-
-                entity.Property(e => e.ZipCode).HasMaxLength(20);
-
-                entity.HasOne(d => d.Tester)
-                    .WithMany(p => p.TesterProfiles)
-                    .HasForeignKey(d => d.TesterId)
-                    .HasConstraintName("FK_dbo.TesterProfiles_dbo.Testers_TesterId");
-            });
-
-            modelBuilder.Entity<Testers>(entity =>
-            {
-                entity.HasKey(e => e.TesterId);
-
-                entity.Property(e => e.Email).HasMaxLength(200);
-
-                entity.Property(e => e.FirstName).HasMaxLength(100);
-
-                entity.Property(e => e.IsConfirmed)
-                    .IsRequired()
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .HasDefaultValueSql("('No')");
-
-                entity.Property(e => e.LastName).HasMaxLength(100);
-
-                entity.Property(e => e.Phone).HasMaxLength(50);
-            });
-
             modelBuilder.Entity<TestOpportunities>(entity =>
             {
                 entity.HasKey(e => e.TestOpportunityId);
@@ -255,9 +273,9 @@ namespace app.Models
 
                 entity.Property(e => e.Title).HasMaxLength(250);
 
-                entity.HasOne(d => d.Organization)
+                entity.HasOne(d => d.Agency)
                     .WithMany(p => p.TestOpportunities)
-                    .HasForeignKey(d => d.OrganizationId)
+                    .HasForeignKey(d => d.AgencyId)
                     .HasConstraintName("FK_dbo.TestOpportunities_dbo.Organizations_OrganizationId");
             });
 
@@ -273,9 +291,9 @@ namespace app.Models
 
                 entity.Property(e => e.Title).HasMaxLength(250);
 
-                entity.HasOne(d => d.Tester)
+                entity.HasOne(d => d.Citizen)
                     .WithMany(p => p.TestOutcomes)
-                    .HasForeignKey(d => d.TesterId)
+                    .HasForeignKey(d => d.CitizenId)
                     .HasConstraintName("FK_dbo.TestOutcomes_dbo.Testers_TesterId");
             });
         }

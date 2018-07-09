@@ -13,11 +13,11 @@ namespace app.Models
         public int TestOpportunityId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public int OrganizationId { get; set; }
+        public int AgencyId { get; set; }
         public string TestUrl { get; set; }
         public DateTime LastUpdate { get; set; }
 
-        public Organizations Organization { get; set; }
+        public Agencies Agency { get; set; }
         public ICollection<TestEnrollment> TestEnrollment { get; set; }
     }
 }

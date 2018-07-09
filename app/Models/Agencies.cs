@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace app.Models
 {
-    public partial class Organizations
+    public partial class Agencies
     {
-        public Organizations()
+        public Agencies()
         {
             TestOpportunities = new HashSet<TestOpportunities>();
         }
 
-        public int OrganizationId { get; set; }
-        public string OrgName { get; set; }
-        public string OrgUrl { get; set; }
+        public int AgencyId { get; set; }
+        public string AgencyName { get; set; }
+        public string AgencyUrl { get; set; }
 
         public ICollection<TestOpportunities> TestOpportunities { get; set; }
     }

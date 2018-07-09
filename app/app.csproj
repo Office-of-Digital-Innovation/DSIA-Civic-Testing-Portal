@@ -16,4 +16,13 @@
     <PackageReference Include="SurveyMonkeyApi" Version="3.2.181" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\FakeTesters\index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Shared\_LayoutDataPage.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

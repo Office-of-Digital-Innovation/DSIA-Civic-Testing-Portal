@@ -11,6 +11,6 @@ namespace app.Models
         public string CompletedTest { get; set; }
 
         public TestOpportunities TestOpportunity { get; set; }
-        public Testers Tester { get; set; }
+        public Citizens Tester { get; set; }
     }
 }
