@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Home\get-involved.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Update="Views\FakeTesters\index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
@@ -25,4 +28,7 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\Home\GetInvolved.cshtml" />
+  </ItemGroup>
 </Project>

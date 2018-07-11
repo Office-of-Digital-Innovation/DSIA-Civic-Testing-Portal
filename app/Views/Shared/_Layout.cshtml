@@ -21,6 +21,10 @@
   <script src="~/catemp/js/libs/modernizr-extra.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
+    crossorigin="anonymous">
+
 
   <environment include="Development">
     <!-- <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -33,7 +37,7 @@
      <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />-->
   </environment>
 </head>
-<body class="primary">
+<body class="">
 
   <!-- Header Area -->
   <header role="banner" id="header" class="global-header fixed">
@@ -94,8 +98,8 @@
           <div class="half settings-links p-t-sm">
 
             <ul class="utility-links ">
-              <li><a href="/Home/About"> About</a></li>
-              <li><a href="/Home/Contact"> Contact</a></li>
+              <li><a href="/Home/About"> Login</a></li>
+              @*<li><a href="/Home/Contact"> Contact</a></li>*@
               <li><a role="button" data-toggle="collapse" href="#siteSettings" aria-expanded="false" aria-controls="siteSettings">Settings</a></li>
             </ul>
           </div>
@@ -107,7 +111,14 @@
     <!-- header branding -->
 
     <div class="branding">
-      <div class="header-organization-banner"><a href="/"><img src="~/images/Fusion-logo.png" alt="Organization Title" /></a></div>
+      <div class="header-organization-banner">
+        @*<a href="/">@*<img src="~/images/Fusion-logo.png" alt="Organization Title" /></a>*@
+        <a href="/" >
+          <img src="~/images/fusion-logo-web-3.png" width="89" height="100" alt="Organization Title" />
+
+        </a>
+      </div>
+
     </div>
 
     <!-- Include Mobile Controls -->
@@ -125,22 +136,51 @@
     </div>
 
     <nav id="navigation" class="main-navigation megadropdown auto-highlight">
-      <ul id="nav_list" class="top-level-nav">
-        <li class="nav-item">
-          <a href="" class="first-level-link"><span class="ca-gov-icon-gears"></span>Citizens</a>
-          <div class="sub-nav">
-            <div class="third">
-              <ul class="second-level-nav">
-                <li class="unit1">
-                  <a href="/Home/Citizens" class="second-level-link"><span class="ca-gov-icon-home" aria-hidden="true"></span>Link 1</a>
-                </li>
-              </ul>
-            </div>
+        <ul id="nav_list" class="top-level-nav">
+            <li class="nav-item">
+                <a href="" class="first-level-link">
+                    <span class="iconShape">
+                        <i class="ca-gov-icon-info-line"></i>
+                    </span>
+                    @*<span class="ca-gov-icon-gears"></span>*@
+                    How it works
 
-          </div>
-        </li>
+                </a>
 
-        <li class="nav-item">
+            </li>
+            <li class="nav-item">
+                <a href="/Home/getInvolved"  class="first-level-link">
+                    <span class="iconShape">
+                        <i class="ca-gov-icon-online-services"></i>
+                    </span>
+                    @*<span class="ca-gov-icon-gears"></span>*@
+                   Get involved
+
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a href="" class="first-level-link">
+                    <span class="iconShape">
+                        <i class="ca-gov-icon-check-line"></i>
+                    </span>
+                    @*<span class="ca-gov-icon-gears"></span>*@
+                    Test Now
+
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a href="" class="first-level-link">
+                    <span class="iconShape">
+                        <i class="ca-gov-icon-building"></i>
+                    </span>
+                    @*<span class="ca-gov-icon-gears"></span>*@
+                    Agencies
+
+                </a>
+            </li>
+            @*<li class="nav-item">
           <a href="" class="first-level-link"><span class="ca-gov-icon-gears"></span>Agencies</a>
           <div class="sub-nav">
             <ul class="second-level-nav">
@@ -150,15 +190,15 @@
             </ul>
 
           </div>
-        </li>
-        
-        <li class="nav-item">
+        </li>*@
+
+            @*<li class="nav-item">
           <a href="" class="first-level-link"><span class="ca-gov-icon-online-services"></span>Login</a>
         </li>
         <li class="nav-item" id='nav-item-search'>
           <a href="javascript:;" class="first-level-link"><span class="ca-gov-icon-search" aria-hidden="true"></span>Search</a>
-        </li>
-      </ul>
+        </li>*@
+        </ul>
     </nav>
 
 

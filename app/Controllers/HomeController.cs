@@ -15,6 +15,10 @@ namespace app.Controllers
             return View();
         }
 
+        public IActionResult GetInvolved() {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
