@@ -40,7 +40,7 @@ We used the following techniques to incorporate our human-centered design proces
 Research: Review of websites that reflected good and bad human-centered design. 
 We also reccommend that by periodically engaging with current and former civic user testers a progressive forward thinking roadmap can be created for furture CA Digital Services. 
 
-User Survey: To get an understanding of civic users needs, and to balance qualitative with quantitative feedback, we also reccommend that an initial survey is conducted to recruit poetential civic testers across our State. 
+User Survey: To get an understanding of civic users needs, and to balance qualitative with quantitative feedback, we also reccommend that an initial survey is conducted to recruit potential civic testers across our State. 
 A demographic drill down on the data collected could be used to observe emerging trends about what is important to civic users of CA State Digital Services. 
 Concept Validation: With an overall concept of the service in mind, we discussed high-level sketches and drawings within Team Fusion. We solicited feedback early and often, spotting necessary changes soon and pivoting quickly in response. Concept validation helped make the design process efficient, iterative and accurate.
 
@@ -55,7 +55,7 @@ We conducted user testing to validate and insure that the completed designs were
 ## Development Process
 #### g. Iterative development
 
-We began the project by defining the request and receiving an overview from the product owner. We established the cadence, roles, and responsibilities of this agile development effort. We implemented XX week sprints to divide the output into finite iterations while providing enough time to make meaningful progress during each iteration. 
+We began the project by defining the request and receiving an overview from the product owner. We established the cadence, roles, and responsibilities of this agile development effort. We implemented 3 day sprints to divide the output into finite iterations while providing enough time to make meaningful progress during each iteration. 
 
 After establishing the initial user stories, the team focused on implementing the technical infrastructure to support them, while also engaging in user research to further refine and prioritize those stories. This process involved capturing feedback across multiple iterations from users, the product owner, and project team as the stories moved from sketches to wireframes to visual designs. 
 
@@ -77,13 +77,14 @@ Our front end code is fully responsive and tested across multiple browsers and d
 	* colorscheme-mono.css	
   
 ### Server Side Language
-  *  C# .NET Core MVC
+  *  C# .NET Core 2.1 MVC
+  * .NET Core SDK 2.1.1
   
 ### Infrastructure
-  * RedHat OpehShift (Container Platform)
-  * Azure (SQL Server Database)
+  * RedHat OpehShift (Container Platform)  
+  * Hostek (SQL Server Database)
 	* AWS Public Cloud 
-
+  
 ## Environment
 #### j. Infrastructure provider
 
