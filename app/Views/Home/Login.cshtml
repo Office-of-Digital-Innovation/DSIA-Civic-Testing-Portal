@@ -1,0 +1,42 @@
+@{
+  ViewData["Title"] = "Help";
+}
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<!-- Set thet  two-column-->
+<body class="primary">
+  
+  <div id="main-content" class="main-content">
+    <div id="main-content" class="p-a-md">
+      <div>
+  @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+  {
+    //this  is for create form tag
+    @Html.AntiForgeryToken() // this is for prevent CSRF attack
+    @Html.ValidationSummary(true)
+    if (@ViewBag.Message != null)
+    {
+      < div style = "border: 1px solid red" >
+      @ViewBag.Message
+      </ div >
+    }
+ 
+  }</div>
+      <div class="rich-text">
+        <h3>Login</h3>
+
+        <h3>Enter Userid&nbsp;   <input /></h3>
+        <h3>Password&emsp;  &nbsp;   <input /></h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+@* This below line is for create javascript section *@
+
+@*@section Scripts{
+      @Scripts.Render("~/bundles/jqueryval")
+  }*@
