@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,9 +15,40 @@ namespace app.Controllers
             return View();
         }
 
-        public IActionResult GetInvolved() {
-            return View();
-        }
+    public IActionResult GetInvolved()
+    {
+      return View();
+    }
+
+    public IActionResult Login()
+    {
+      return View();
+    }
+    public IActionResult Tests()
+    {
+      return View();
+    }
+
+
+    public IActionResult Tests2()
+    {
+      return View();
+    }
+
+    public IActionResult Tests3()
+    {
+      return View();
+    }
+
+    public IActionResult Tests4()
+    {
+      return View();
+    }
+    public IActionResult Testsmap()
+    {
+      return View();
+    }
+    
 
         public IActionResult About()
         {
@@ -35,6 +66,18 @@ namespace app.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        public IActionResult Condition()
+        {
+            return View();
+        }
+
+        public IActionResult Help()
+        {
+            ViewData["Message"] = "New page.";
+
             return View();
         }
 
