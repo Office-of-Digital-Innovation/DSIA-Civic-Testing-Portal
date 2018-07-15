@@ -24,18 +24,19 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.AgencyName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AgencyUrl)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.AgencyId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AgencyId">Details</a>
-            </td>
-        </tr>
+      <tr>
+        <td>
+          @Html.DisplayFor(modelItem => item.AgencyName)
+        </td>
+        <td>
+         @*@ @Html.DisplayFor(modelItem => item.AgencyUrl)*@
+          <a href="@item.AgencyUrl" target="_blank">@item.AgencyUrl</a>
+        </td>
+        <td>
+          <a asp-action="Edit" asp-route-id="@item.AgencyId">Edit</a> |
+          <a asp-action="Details" asp-route-id="@item.AgencyId">Details</a>
+        </td>
+      </tr>
 }
     </tbody>
 </table>
