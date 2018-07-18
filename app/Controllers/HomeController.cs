@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using app.Models;
+using app.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace app.Controllers
 {

@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using app.Models;
+using app.Data;
 
 namespace app.Controllers
 {
@@ -18,12 +20,13 @@ namespace app.Controllers
       _context = context;
     }
 
-    [Route("Api/[controller]")]
-    // GET: FakeTesters
-    public async Task<IActionResult> Index()
-    {
-      return View(await _context.FakeTesters.ToListAsync());
-    }
+        // GET: FakeTesters
+        // Security
+        [Authorize]
+        public async Task<IActionResult> Index()
+        {
+            return View(await _context.FakeTesters.ToListAsync());
+        }
 
     // GET: FakeTesters/Details/5
     public async Task<IActionResult> Details(int? id)

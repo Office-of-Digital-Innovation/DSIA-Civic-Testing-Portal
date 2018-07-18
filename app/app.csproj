@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-app-01B9003A-B6C4-4CFD-9A3D-6D70CC22F099</UserSecretsId>  
     <Description>DSIA - Team Fusion -</Description>
     <Copyright>2018</Copyright>
     <Product>Proof of Concept</Product>
@@ -13,7 +14,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
     <PackageReference Include="SurveyMonkeyApi" Version="3.2.181" />
   </ItemGroup>
 

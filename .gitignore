@@ -6,3 +6,5 @@
 /app/bin/Debug/netcoreapp2.1
 /app/obj
 /offline
+/.vs
+/app/Properties/PublishProfiles

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using app.Models;
+using app.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace app.Controllers
 {
@@ -19,6 +21,8 @@ namespace app.Controllers
         }
 
         // GET: Agencies
+        // Add Security
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Agencies.ToListAsync());
