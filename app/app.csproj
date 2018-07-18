@@ -36,6 +36,6 @@
     <None Include="Views\Home\GetInvolved.cshtml" />
     <None Include="Views\Home\PreTest.cshtml" />
     <None Include="Views\Home\HowItWorks.cshtml" />
-    <None Include="Views\Home\IndexB.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
   </ItemGroup>
 </Project>
