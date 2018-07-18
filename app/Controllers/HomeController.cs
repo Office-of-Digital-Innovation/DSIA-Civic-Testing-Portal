@@ -32,6 +32,26 @@ namespace app.Controllers
       return View();
     }
 
+    public IActionResult StudentAidSurvey()
+    {
+      return View();
+    }
+
+    public IActionResult HowItWorks()
+    {
+      return View();
+    }
+
+    public IActionResult IndexB()
+    {
+      return View();
+    }
+
+    public IActionResult PreTest()
+    {
+      return View();
+    }
+
     public IActionResult ChallengeIdea()
     {
       return View();

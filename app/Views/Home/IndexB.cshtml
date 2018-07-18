@@ -1,0 +1,590 @@
+﻿
+@{
+  ViewData["Title"] = "home";
+}
+
+
+@*<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <!-- Set thet  two-column-->
+  <body class="primary">*@
+
+<div id="skip-to-content">
+  <a href="#main-content">Skip to Main Content</a>
+</div>
+
+<div class="location-settings section section-standout collapse collapsed " id="locationSettings">
+  <div class="container p-y">
+    <button type="button" class="close" data-toggle="collapse" data-target="#locationSettings" aria-expanded="false" aria-controls="locationSettings" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="form-group form-inline">
+      <label for="locationZipCode">Saving your location allows us to provide you with more relevant information.</label>
+      <input type="text" class="form-control" id="locationZipCode" placeholder="Zip Code">
+      <button type="button" class="btn btn-primary">Set Location</button>
+    </div>
+  </div>
+</div>
+<!-- Alert Banner -->
+<!-- Utility Header-->
+
+
+<div id="head-search" class="search-container  fade">
+  <form action="/api/sitecore/Search/Search" id="local_form" method="post">
+    <div class="textfield-container">
+      <label for="search_local_textfield" accesskey="s" class="hidden">Search this site: </label>
+      <input type="hidden" id="quick-search-tab" name="tab" value="content" />
+      <input data-search-id="_quick" type="text" name="search_local_textfield" id="search_local_textfield" class="search-textfield" size="35" autocomplete="off" placeholder="Search Content, Documents and More..." />
+    </div>
+    <div class="submit-container">
+      <button type="submit"><span class="ca-gov-icon-search"><span class="sr-only">Search</span></span></button>
+    </div>
+    <button type="button" class="close close-search" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+  </form>
+</div>
+<div class="header-decoration"></div>
+<div class="header-primary-banner" style="background-image: url('/images/banner-dark.jpg'); ">
+  <h1> Help us improve our online services</h1>
+  <div>
+    <a class="btn btn-highlight" href="">
+      Get Started<span class="ca-gov-icon-arrow-next">
+      </span>
+    </a>
+  </div>
+</div>
+
+<main class="main-primary">
+  <div class="section section-default">
+    <div class="container">
+      <div class="group">
+        <div class="third ">
+          <div class="detail clearfix content-title">
+            <h2>I Want To ...</h2>
+            <div class="description">
+              <div class="rich-text">
+                <ul class="list-divided">
+                  <li> <a href="https://www.surveymonkey.com/r/get-involved">Help make California Digital Services</a> </li>
+
+                  <li> <a href="">Become an Agency Partner</a> </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="third ">
+
+              <div class="detail clearfix content-title">
+                <h2>Current User Tests</h2>
+                <div class="description">
+                  <div class="rich-text">
+                    <ul class="list-divided">
+
+                      <li>  <a href="/Home/ChallengeIdea"> Digital Service Challenge </a> </li>
+                      <li>  <a href="/Home/Tests">  Student Aid website with survey </a> </li>
+                      <li>  <a href="/Home/Tests3">  Child Welfare website with survey </a> </li>
+                      <li>  <a href="https://participate.lookback.io/sfmmvv">  Student Aid Website video test</a> </li>
+                      <li>  <a href="https://participate.lookback.io/JFpWhe">  Franchise Tax Board Website video test</a> </li>
+                      <li>  <a href="https://participate.lookback.io/dnw9Yx">  Department of Technology Website video test</a> </li>
+                      <li>  <a href="https://participate.lookback.io/ieZwSS">  Department of Social Services Website video test</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+        <div class="third ">
+
+              <div class="detail clearfix content-title">
+                <h2>Explore the Numbers</h2>
+                <div class="description">
+                  <div class="rich-text">
+                    <p><a href="/Home/MoreNumbers">Fusion Survey Numbers &gt;&gt;</a></p>
+                    <p>&nbsp;</p>
+                    <p><a href="https://data.ca.gov/search/type/dataset?query=surveys">California Open Data Surveys &gt;&gt;</a></p>
+                    <p>&nbsp;</p>
+                    <p><a href="http://www.parks.ca.gov/SPOA/AdultPhone"> Parks.Ca.Gov Phone Survey Results&gt;&gt;</a></p>
+                    <p>&nbsp;</p>
+                    <p><a href="https://sonomacounty.ca.gov/CRA/Registrar-of-Voters/Voting-System/News/Voter-Opinion-Survey-Results/">Sonoma County Survey Results&gt;&gt;</a></p>
+                    <p>&nbsp;</p>
+                    <p><a href="https://www.dds.ca.gov/QA/">Developmental Assessments NCI Survey Results&gt;&gt;</a></p>
+                    <p>&nbsp;</p>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section section-primary">
+    <div class="container">
+      <div class="row">
+        <div class="p-b-md">
+          <div class="text-center">
+
+            <h2>Upcoming Events</h2>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="col-md-12 ">
+
+          <!-- Begin Upcoming Events -->
+          <div class="special-announcements">
+            <!-- TITLE -->
+            <!-- CALENDAR ITEMS -->
+            <div class="row p-b-md">
+              <!-- icon v3 -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+                <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <symbol id="calendar-icon" viewBox="0 0 65 70">
+                  <title>calendar-icon</title>
+                  <path d="M58.4,4.4h-2.3c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-2,0.9-2,2c0,0.2,0.1,0.4,0.1,0.6h-7.5C45,4.2,45,4,45,3.8
+                  c0-1.1-0.9-2-2-2s-1.9,0.9-1.9,2c0,0.2,0,0.4,0.1,0.6h-7.5c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2c-1.1,0-2,0.9-2,2
+                  c0,0.2,0.1,0.4,0.1,0.6h-7.5c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-2,0.9-2,2c0,0.2,0.1,0.4,0.1,0.6h-7.5
+                  c0.1-0.2,0.1-0.4,0.1-0.6c0-1.1-0.9-2-2-2s-1.9,0.9-1.9,2c0,0.2,0,0.4,0.1,0.6H5.6C2.5,4.4,0,6.9,0,10v52.8c0,3.1,2.5,5.6,5.6,5.6
+                  H52l11.9-11.9V10C63.9,6.9,61.4,4.4,58.4,4.4z M60.9,55.2l-0.6,0.6h-4.8c-2.2,0-4.1,1.8-4.1,4.1v4.8l-0.6,0.6H5.6
+                  c-1.4,0-2.5-1.1-2.5-2.5V12.2H61L60.9,55.2L60.9,55.2z" />
+                  </svg>
+
+
+
+
+                  <div class="col-sm-4">
+
+                    <article class="event-item" itemscope itemtype="http://schema.org/Event">
+                      <time class="start-date announcement-calendar" itemprop="startDate" datetime="">
+                        <svg class="calendar-icon" width="50px" height="54px">
+                          <use xlink:href="#calendar-icon" />
+                        </svg>
+                        <div class="announcement-month">Jun</div>
+                        <div class="announcement-day">29</div>
+                      </time>
+                      <div class="announcement-teaser">
+                        <a href="" class="title" itemprop="url"><span itemprop="name">Santa Barabara community meeting</span></a>
+
+                        <div class="description" itemprop="description"> Join us 7pm - 9pm and share your thoughts in person</div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-sm-4">
+
+                    <article class="event-item" itemscope itemtype="http://schema.org/Event">
+                      <time class="start-date announcement-calendar" itemprop="startDate" datetime="">
+                        <svg class="calendar-icon" width="50px" height="54px">
+                          <use xlink:href="#calendar-icon" />
+                        </svg>
+                        <div class="announcement-month">Aug</div>
+                        <div class="announcement-day">29</div>
+                      </time>
+                      <div class="announcement-teaser">
+                        <a href="" class="title" itemprop="url"><span itemprop="name">San Diego community meeting</span></a>
+                        <div class="description" itemprop="description"> Join us 10am - noon and share your thoughts in person</div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-sm-4">
+
+                    <article class="event-item" itemscope itemtype="http://schema.org/Event">
+                      <time class="start-date announcement-calendar" itemprop="startDate" datetime="">
+                        <svg class="calendar-icon" width="50px" height="54px">
+                          <use xlink:href="#calendar-icon" />
+                        </svg>
+                        <div class="announcement-month">Aug</div>
+                        <div class="announcement-day">30</div>
+                      </time>
+                      <div class="announcement-teaser">
+                        <a href="" class="title" itemprop="url"><span itemprop="name">South Lake Tahoe community meeting</span></a>
+                        <div class="description" itemprop="description"> Join us 7pm - 9pm and share your thoughts in person</div>
+                      </div>
+                    </article>
+                  </div>
+
+                </div>
+
+              </div>
+              <!-- End Upcoming Events -->
+
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="p-t-sm">
+              <div class="text-center">
+                <a href="/Home/Testsmap" class="btn btn-primary">Search other events coming to your commmunity></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-inverted">
+        <div class="parallax-bg" style="background-image:url('')"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+              <h2 class="h1">The Fusion Mission</h2>
+              <p class="lead"><em><h4><span> agencies, to benefit the state&rsquo;s people and enhance the . </span></h4></em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="section section-">
+        <div class="container">
+          <div class="group">
+            <div class="col-md-12 ">
+              <!-- BLOGS -->
+              <div class="row">
+                <div class="third">
+                  <!-- Begin Blog Feature -->
+                  <article class="blog-post-teaser">
+
+                <div class="post-image">
+                  <a href="" title="">
+                    <picture>
+                      <!-- IE9 doesn't support picture srcset -->
+                      <!--[if IE 9]><video style="display: none;"><![endif]-->
+                      <source srcset="" media="(min-width: 768px)">
+                      <source srcset="" media="(max-width: 767px)">
+                      <!--[if IE 9]></video><![endif]-->
+                      <img src="" alt="Image">
+                    </picture>
+                  </a>
+                </div>
+                <div class="post">
+                  <h3><a href=""> ...</a></h3>
+
+                  <div class="summary">
+                    <p>.</p>
+                  </div>
+                  <p class="post-date">Jun 28, 2018</p>
+                  <a href="" class="read-more">Read More <span class="ca-gov-icon-arrow-next"></span></a>
+                </div>
+              </article>
+            </div>
+            <div class="third">
+              <!-- Begin Blog Feature -->
+              <article class="blog-post-teaser">
+                <div class="post-image">
+                  <a href="" title="">
+                    <picture>
+                      <!-- IE9 doesn't support picture srcset -->
+                      <!--[if IE 9]><video style="display: none;"><![endif]-->
+                      <source srcset="" media="(min-width: 768px)">
+                      <source srcset="" media="(max-width: 767px)">
+                      <!--[if IE 9]></video><![endif]-->
+                      <img src="" alt="">
+                    </picture>
+                  </a>
+                </div>
+                <div class="post">
+                  <h3><a href="">State’s Rol ...</a></h3>
+                  <div class="summary">
+                    <p>Technology in California ...</p>
+                  </div>
+                  <p class="post-date">Jun 26, 2018</p>
+                  <a href="" class="read-more">Read More <span class="ca-gov-icon-arrow-next"></span></a>
+                </div>
+              </article>
+            </div>
+            <div class="third">
+              <!-- Begin Blog Feature -->
+              <article class="blog-post-teaser">
+                <div class="post">
+                  <h3><a href="">  Report Released</a></h3>
+                  <div class="summary">
+                    <p>Data. ...</p>
+                  </div>
+                  <p class="post-date">May 31, 2018</p>
+                  <a href="" class="read-more">Read More <span class="ca-gov-icon-arrow-next"></span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="p-t-sm">
+          <div class="text-center">
+            <a href="/News/Blog" class="btn btn-default">More Blogs >></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-primary">
+    <div class="container">
+      <div class="group">
+        <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">789</span><span class="unit">%</span>
+              </div>
+              <p class="text-center">Statewide Survey totals, percent as of April 23, 2018</p>
+            </div>
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">10.7</span><span class="unit">b</span>
+              </div>
+              <p class="text-center">...</p>
+
+
+            </div>
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">28,801</span><span class="unit"></span>
+              </div>
+              <p class="text-center">Visitors at our 6 Focus Group Centers in 2018</p>
+
+            </div>
+            <div class="quarter ">
+
+              <div class="stat-counter ">
+                <span class="unit"></span><span class="number-counter">2590</span><span class="unit"></span>
+              </div>
+              <p class="text-center">Total Survey Counts</p>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-">
+        <div class="container">
+          <div class="row">
+            <div class="p-b-md">
+              <div class="text-center">
+               
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <div class="col-md-12 ">
+              <div class="row">
+                <div class="text-center">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+
+  <div class="section section-impact section-footer">
+    <div class="container">
+      <div class="row group">
+        <div class="quarter" style="height: 120px;">
+          <h4>About</h4>
+          &emsp; <a href="/Home/About" target="">About</a><br />
+          &emsp;   <a href="/Home/Contact" target="">Contact</a><br />
+        </div>
+
+        <div class="quarter" style="height: 120px;">
+          <h4>Campaigns</h4>
+          &emsp;<a href="http://registertovote.ca.gov" target="_blank">Register to vote</a><br />
+
+          &emsp;  <a href="http://www.flexalert.org" target="_blank">Flex Alert</a>
+        </div>
+        <div class="quarter" style="height: 120px;">
+          <h4>Support</h4>
+          &emsp; <a href="/Home/Help" target="">Help</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Global Footer -->
+<!-- Extra Decorative Content -->
+<div class="decoration-last">&nbsp;</div>
+
+<!-- Extra Decorative Content -->
+<div class="decoration-last">&nbsp;</div>
+<!-- Load jQuery from CDN with fallback to local copy -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+<script>
+  //Fall back to local copy if no jquery found
+  if (typeof jQuery == 'undefined') {
+    document.write(unescape("%3Cscript src='/js/libs/jquery-1.11.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+  }
+</script>
+
+<script src="/js/libs/jquery.mask.min.js"></script>
+
+<!-- Load template core -->
+<script src="/js/dwr.core.js"></script>
+<script src="/js/search.dwr.core.js"></script>
+<script src="/js/mapthat.dwr.core.js"></script>
+<script src="/js/relatednews.dwr.core.js"></script>
+<script src="/js/calculator.js"></script>
+
+
+
+<script type="text/javascript">
+  //Google Analytics script for Tracking
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'xxx']);
+  _gaq.push(['_setDomainName', '.ca.gov']);
+  _gaq.push(['_trackPageview']);
+
+  _gaq.push(['b._setAccount', 'xxx']); // statewide analytics - do not remove or change
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['b._setDomainName', '.ca.gov']);
+  _gaq.push(['b._trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+<!--
+
+**********************************************************************
+**********************************************************************
+**********************************************************************
+-->
+
+
+<div id="main-content" class="main-content">
+    <div class="section">
+
+        <main class="main-primary">
+            <h1>Test</h1>
+
+            <section class="section section-understated">
+                <div class="parallax-bg" style="background: linear-gradient(to bottom, rgba(254,230,60,1) 0%,rgba(255,174,59,1) 100%); "></div>
+                <div class="container  text-center">
+                    <h2>Get rewarded for helping us improve our services</h2>
+                    <ol class="list-unstyled group grid">
+                        <li class="third">
+                            <h3 class="display-1"><span class="d-inline-block rounded-circle p-a-sm m-a-sm bg-primary" style="width: 2em; height: 2em;">1.</span> <span class="d-block">Create an account</span></h3>
+                            <p>We don't ask for much information.</p>
+                        </li>
+                        <li class="third">
+                            <h3 class="display-1"><span class="d-inline-block rounded-circle p-a-sm m-a-sm bg-primary" style="width: 2em; height: 2em;">2.</span> <span class="d-block">Test one of our services</span></h3>
+                            <p>It's quick and easy.</p>
+                        </li>
+                        <li class="third">
+                            <h3 class="display-1"><span class="d-inline-block rounded-circle p-a-sm m-a-sm bg-primary" style="width: 2em; height: 2em;">3.</span><span class="d-block">Get rewarded</span></h3>
+                            <p>Our way of thanking you for your time.</p>
+                        </li>
+                    </ol>
+                    <a href="#" class="btn btn-standout">Learn more <span class="sr-only">about how it works</span> <span aria-hidden="true" class="ca-gov-icon-arrow-next"></span></a>
+
+
+                </div>
+            </section>
+            <section class="section section-default">
+
+                <div class="container text-center">
+                    <p>or&hellip;</p><h2>Try a test now</h2>
+                    <p>You must login to receive rewards.</p>
+
+
+                    <div class="group p-r-lg">
+                        <!--  <div class="two-thirds">
+                            <div class="card card-default">
+                            <img class="card-img-top img-responsive m-t-sm" src="\images\dmv_now_icon.png" alt="DMV Now">
+                            <div class="card-block">
+                                <h3 class="card-title">DMV Now</h3>
+                                <p>Test Department of Motor Vehicle's new  <a href="#">DMV Now</a>. This test simulates the experience at DMV Kiosks designed to skip the lin. </p>
+                                <a href="#" class="btn btn-default">Test DMV Now</a>
+                            </div>
+                        </div>
+
+                            </div>-->
+
+                        <div class="two-thirds">
+                            <div class="card card-default">
+                                <img class="card-img-top img-responsive m-t-sm" src="\images\ca-child-welfare-logo.jpg" alt="California Child Welfare Indicators Project">
+                                <div class="card-block">
+                                    <h3 class="card-title">California Child Welfare Indicators Project</h3>
+                                    <p>Test customizable information on California’s entire child welfare system </p>
+                                    <a href="#" class="btn btn-default">Test Child Welfare Indicators</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="card card-default">
+                                <img class="card-img-top img-responsive m-t-sm" src="\images\ca-student-aid-commision.svg" alt="California Student Aid Commission">
+                                <div class="card-block">
+                                    <h3 class="card-title">Apply for Cal Grant</h3>
+                                    <p>Test out our updated Cal Grant application.</p>
+                                    <a href="#" class="btn btn-default">Test Cal Grant</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="half">
+                            <div class="card card-default">
+                                <img class="card-img-top img-responsive m-t-sm" src="\images\FTB-Logo-Circle.png" alt="Franchise Tax Board">
+                                <div class="card-block">
+                                    <h3 class="card-title">FTB Mobile</h3>
+                                    <p>Try out the beta version of Franchise Tax Board's new mobile application.</p>
+                                    <a href="#" class="btn btn-default">Test FTB Mobile</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="half">
+                            <div class="card card-default">
+                                <img class="card-img-top img-responsive m-t-sm" src="\images\CalFresh.png" alt="Cal Fresh">
+                                <div class="card-block">
+                                    <h3 class="card-title">Cal Fresh</h3>
+                                    <p>Try applying for California's New <a href="">CalFresh</a> food benefits for low-income families program. </p>
+                                    <a href="#" class="btn btn-default">Test CalFresh</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <section class="section section-inverted" style="min-height:10em">
+                <div class="parallax-bg" style="background-image:url(/images/think-outside-the-box3.jpg)"></div>
+                <div class="container">
+                    <div class="group">
+                        <div class="half">
+                            <div class="p-a-lg m-a-lg">
+                                <h3>Have an idea for a new state service?</h3>
+                                <p>Submit an idea for our <a href="#">Digital Innovation Challenge</a>.</p>
+                                <a class="btn btn-primary">Submit an idea</a>
+                            </div>
+                            <div class="half"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
