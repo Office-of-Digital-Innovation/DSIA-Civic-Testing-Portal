@@ -19,6 +19,9 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\get-involved.cshtml" />
+    <Content Remove="Views\Home\PreTest.cshtml" />
+    <Content Remove="Views\Home\HowItWorks.cshtml" />
+    <Content Remove="Views\Home\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Views\FakeTesters\index.cshtml">
@@ -31,5 +34,8 @@
 
   <ItemGroup>
     <None Include="Views\Home\GetInvolved.cshtml" />
+    <None Include="Views\Home\PreTest.cshtml" />
+    <None Include="Views\Home\HowItWorks.cshtml" />
+    <None Include="Views\Home\Index.cshtml" />
   </ItemGroup>
 </Project>
