@@ -57,6 +57,7 @@ namespace app.Controllers
       return View();
     }
 
+    
     public IActionResult OtherSurveys()
     {
       return View();
@@ -71,11 +72,20 @@ namespace app.Controllers
       return View();
     }
 
+    public IActionResult HowItWorks()
+    {
+      return View();
+    }
+
     public IActionResult MoreNumbers()
     {
       return View();
     }
-    
+
+    public IActionResult ChallengeIdea()
+    {
+      return View();
+    }
     public IActionResult Tests2()
     {
       return View();

@@ -138,3 +138,4 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
 	* Install-Package Microsoft.EntityFrameworkCore.SqlServer
 	* Install-Package Microsoft.EntityFrameworkCore.Tools
 	* Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design (optional if not present)
+  * Install-Package SurveyMonkeyApi -Version 3.2.181
