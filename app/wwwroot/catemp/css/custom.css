@@ -31,9 +31,13 @@
   width:inherit;
 }
 
-#exploreUL a {
-    font-size: 20px !important;
+.testCard {
+   min-height: 23em;
+   
+}
 
+#exploreUL a {
+  font-size: 20px !important;
 }
 
 .cn {
