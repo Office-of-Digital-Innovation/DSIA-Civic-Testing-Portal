@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -45,8 +45,9 @@ namespace app.Controllers
             return View(citizens);
         }
 
-        // GET: Citizens/Create
-        public IActionResult Create()
+    // GET: Citizens/Create
+    [Authorize]
+    public IActionResult Create()
         {
             return View();
         }
@@ -67,8 +68,9 @@ namespace app.Controllers
             return View(citizens);
         }
 
-        // GET: Citizens/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+    // GET: Citizens/Edit/5
+    [Authorize]
+    public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -118,8 +120,9 @@ namespace app.Controllers
             return View(citizens);
         }
 
-        // GET: Citizens/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+    // GET: Citizens/Delete/5
+    [Authorize]
+    public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
