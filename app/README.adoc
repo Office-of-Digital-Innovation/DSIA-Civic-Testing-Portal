@@ -136,8 +136,9 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
   * Note: You have to manually click to rebuild container after source changes if the process is not automated. 
 
 ### VISUAL STUDIO:
-  ### Tools > NuGet Package Manager > Package Manager Console:  
+ ### Tools > NuGet Package Manager > Package Manager Console:  
   * Install-Package Microsoft.EntityFrameworkCore.SqlServer
   * Install-Package Microsoft.EntityFrameworkCore.Tools
   * Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design (optional if not present)
-  * Install-Package SurveyMonkeyApi -Version 3.2.181 (Use Postman to test how Survey Monkey API calls work).
+  * Install-Package SurveyMonkeyApi -Version 3.2.181
+  * (Use Postman to test how Survey Monkey API calls work)
