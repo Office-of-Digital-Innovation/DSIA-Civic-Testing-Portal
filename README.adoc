@@ -125,7 +125,10 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
 
   * [Install Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
   * [Install GitHub Extension for Visual Studio] (https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
-  * Clone repository '$ git clone https://github.com/jakeNesom/ca-fusion.git'
+  * Clone repository '$ git clone https://github.com/<Your Repository Here>'
+  * Unzip and restore the "cafusion" database located in solution folder "_SQLBackup"
+  * Run the script called "CreateDimDate" also located in folder "_SQLBackup"
+  * Update "appsetttings.json" with connection string to SQL database (Assumes SQL Server 2016)
   * First Sign up for a [RedHat Developer Account](https://developers.redhat.com/)
   * Second use Developer ID to Sign up for a [RedHat OpenShift Account](https://www.openshift.com/)
   * Create Source2Image Project https://docs.openshift.com/online/creating_images/s2i.html#creating-images-s2i
