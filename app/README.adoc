@@ -124,7 +124,7 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
 
   * [Install Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
   * [Install GitHub Extension for Visual Studio] (https://marketplace.visualstudio.com/items?itemName=GitHub.GitHubExtensionforVisualStudio)
-  * Clone repository '$ git clone https://github.com/<Your Repository Here>'
+  * Clone repository '$ git clone https://github.com/<Wherever this project is hosted>'
   * Unzip and restore "cafusion" database located inside project folder "_SQLBackup" (Assumes SQL 2016)
   * After restoring database run script "CreateDimDate.sql" 
   * Update "appsettings.json" with connection string details to the restored database
@@ -140,4 +140,4 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
 	* Install-Package Microsoft.EntityFrameworkCore.SqlServer
 	* Install-Package Microsoft.EntityFrameworkCore.Tools
 	* Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design (optional if not present)
-	* Install-Package SurveyMonkeyApi -Version 3.2.181
+	* Install-Package SurveyMonkeyApi -Version 3.2.181 (Use Postman to test how Survey Monkey API calls work)
