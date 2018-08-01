@@ -119,7 +119,11 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
   - [ASP.NET Core](https://github.com/aspnet/Home)
   - [Visual Studio Code](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)
   - [Chakra Core](https://github.com/Microsoft/ChakraCore)
-
+  
+## OPTIONAL PLATFORM TO LEVERAGE
+  - Microsoft PowerBI - Dashboard / Map / Data Analytics
+  - Lookback.io -  for video recording
+  
 ## Setup
 #### p. Instructions
 
@@ -143,3 +147,6 @@ To see how we followed the USDS Playbook to build our service, see: https://gith
 	* Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design (optional if not present)
   *  Install-Package SurveyMonkeyApi -Version 3.2.181
   *  (Use Postman to test how Survey Monkey API calls work)
+
+
+  
