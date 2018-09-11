@@ -5,7 +5,7 @@
 Civic User Testing Portal
 
 ## Prototype URL:
-http://ca-fusion-web-ca-fusion-project.7e14.starter-us-west-2.openshiftapps.com/
+http://cafusion.azurewebsites.us/
 
 ## Team
 #### a. One accountable leader
